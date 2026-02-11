@@ -4,11 +4,7 @@ import { BookOpen, Feather, Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-navy-light to-black" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,168,67,0.08),transparent_60%)]" />
-
+    <section className="relative flex flex-col overflow-hidden bg-black">
       <div className="relative z-10 pt-20 sm:pt-28 pb-20 sm:pb-28">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Author photo */}
@@ -46,7 +42,9 @@ export default function Hero() {
               </div>
               <div className="text-left">
                 <div className="text-xl font-bold text-cream font-serif">3</div>
-                <div className="text-cream/30 text-xs uppercase tracking-widest">Series</div>
+                <div className="text-cream/30 text-xs uppercase tracking-widest">
+                  Series
+                </div>
               </div>
             </div>
             <div className="flex items-center gap-2.5">
@@ -54,8 +52,12 @@ export default function Hero() {
                 <Feather className="w-5 h-5 text-gold" />
               </div>
               <div className="text-left">
-                <div className="text-xl font-bold text-cream font-serif">22</div>
-                <div className="text-cream/30 text-xs uppercase tracking-widest">Books</div>
+                <div className="text-xl font-bold text-cream font-serif">
+                  22
+                </div>
+                <div className="text-cream/30 text-xs uppercase tracking-widest">
+                  Books
+                </div>
               </div>
             </div>
             <div className="flex items-center gap-2.5">
@@ -63,16 +65,17 @@ export default function Hero() {
                 <Sparkles className="w-5 h-5 text-gold" />
               </div>
               <div className="text-left">
-                <div className="text-xl font-bold text-cream font-serif">388</div>
-                <div className="text-cream/30 text-xs uppercase tracking-widest">Chapters</div>
+                <div className="text-xl font-bold text-cream font-serif">
+                  388
+                </div>
+                <div className="text-cream/30 text-xs uppercase tracking-widest">
+                  Chapters
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black to-transparent" />
     </section>
   );
 }

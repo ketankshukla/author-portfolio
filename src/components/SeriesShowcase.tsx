@@ -157,7 +157,14 @@ function BookCard({
   siteUrl,
   accentColor,
 }: {
-  book: { id: number; roman: string; title: string; subtitle: string; coverImage: string; color: string };
+  book: {
+    id: number;
+    roman: string;
+    title: string;
+    subtitle: string;
+    coverImage: string;
+    color: string;
+  };
   bookIndex: number;
   siteUrl: string;
   accentColor: string;
@@ -205,10 +212,7 @@ function BookCard({
 
 export default function SeriesShowcase() {
   return (
-    <section id="series" className="relative py-16 sm:py-24">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-navy-light to-black" />
-
+    <section id="series" className="relative py-16 sm:py-24 bg-black">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16 animate-fadeInUp">
@@ -216,7 +220,9 @@ export default function SeriesShowcase() {
             Published Works
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif mb-4">
-            <span className="heading-gradient">Three Series. Twenty-Two Books.</span>
+            <span className="heading-gradient">
+              Three Series. Twenty-Two Books.
+            </span>
           </h2>
           <p className="text-cream/40 text-sm sm:text-base max-w-2xl mx-auto">
             From epic fantasy to the science of mastery to the philosophy of

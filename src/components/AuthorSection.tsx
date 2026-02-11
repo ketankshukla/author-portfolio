@@ -4,11 +4,7 @@ import { BookOpen, Feather, Pen, Globe } from "lucide-react";
 
 export default function AuthorSection() {
   return (
-    <section id="author" className="relative py-24 sm:py-32">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-navy-light to-black" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(212,168,67,0.06),transparent_60%)]" />
-
+    <section id="author" className="relative py-24 sm:py-32 bg-black">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left: Author info */}
@@ -45,21 +41,22 @@ export default function AuthorSection() {
                 <em className="text-gold/80">Repetition: Mother of Mastery</em>{" "}
                 series is a five-book non-fiction exploration of the science,
                 psychology, and daily practice of mastery — from neural pathways
-                and habit formation to creative performance and long-term growth.
-                The{" "}
-                <em className="text-gold/80">Reality Without Belief</em>{" "}
-                series is a five-book non-fiction work that dismantles the
-                unexamined reverence for belief, faces reality directly, and
-                arrives at the quiet freedom of having nothing left to defend.
+                and habit formation to creative performance and long-term
+                growth. The{" "}
+                <em className="text-gold/80">Reality Without Belief</em> series
+                is a five-book non-fiction work that dismantles the unexamined
+                reverence for belief, faces reality directly, and arrives at the
+                quiet freedom of having nothing left to defend.
               </p>
 
               <p>
                 <em className="text-gold/80">Aztec Samurai Adventures</em> is
-                his fiction work — a twelve-book epic fantasy saga spanning three
-                acts. It follows a reluctant warrior and her growing team as they
-                face an empire, forge alliances, lose mentors, and fight a war
-                that tests everything they believe about leadership, sacrifice,
-                and what it means to protect something worth protecting.
+                his fiction work — a twelve-book epic fantasy saga spanning
+                three acts. It follows a reluctant warrior and her growing team
+                as they face an empire, forge alliances, lose mentors, and fight
+                a war that tests everything they believe about leadership,
+                sacrifice, and what it means to protect something worth
+                protecting.
               </p>
 
               <p>
@@ -99,22 +96,34 @@ export default function AuthorSection() {
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="glass rounded-xl p-6 text-center hover-lift">
                 <BookOpen className="w-8 h-8 text-gold mx-auto mb-3" />
-                <div className="text-3xl font-bold text-cream font-serif">22</div>
-                <div className="text-cream/40 text-sm mt-1">Books Published</div>
+                <div className="text-3xl font-bold text-cream font-serif">
+                  22
+                </div>
+                <div className="text-cream/40 text-sm mt-1">
+                  Books Published
+                </div>
               </div>
               <div className="glass rounded-xl p-6 text-center hover-lift">
                 <Feather className="w-8 h-8 text-gold mx-auto mb-3" />
-                <div className="text-3xl font-bold text-cream font-serif">3</div>
-                <div className="text-cream/40 text-sm mt-1">Complete Series</div>
+                <div className="text-3xl font-bold text-cream font-serif">
+                  3
+                </div>
+                <div className="text-cream/40 text-sm mt-1">
+                  Complete Series
+                </div>
               </div>
               <div className="glass rounded-xl p-6 text-center hover-lift">
                 <Pen className="w-8 h-8 text-gold mx-auto mb-3" />
-                <div className="text-3xl font-bold text-cream font-serif">388</div>
+                <div className="text-3xl font-bold text-cream font-serif">
+                  388
+                </div>
                 <div className="text-cream/40 text-sm mt-1">Total Chapters</div>
               </div>
               <div className="glass rounded-xl p-6 text-center hover-lift">
                 <Globe className="w-8 h-8 text-gold mx-auto mb-3" />
-                <div className="text-3xl font-bold text-cream font-serif">2</div>
+                <div className="text-3xl font-bold text-cream font-serif">
+                  2
+                </div>
                 <div className="text-cream/40 text-sm mt-1">Genres</div>
               </div>
             </div>
@@ -200,18 +209,20 @@ export default function AuthorSection() {
               </h3>
               <div className="space-y-3 text-cream/45 text-sm leading-relaxed">
                 <p>
-                  &ldquo;I write the books I would want to read. If a non-fiction
-                  book doesn&rsquo;t change how you think about something, it
-                  hasn&rsquo;t done its job. If a fiction book doesn&rsquo;t make
-                  you care about the people in it, none of the plot matters.&rdquo;
+                  &ldquo;I write the books I would want to read. If a
+                  non-fiction book doesn&rsquo;t change how you think about
+                  something, it hasn&rsquo;t done its job. If a fiction book
+                  doesn&rsquo;t make you care about the people in it, none of
+                  the plot matters.&rdquo;
                 </p>
                 <p>
                   &ldquo;Every series I write starts with a question I
-                  can&rsquo;t answer quickly. The Repetition series started with:
-                  why do some people achieve mastery and others don&rsquo;t? The
-                  Reality series started with: what happens when you stop
-                  believing and start seeing? The Aztec series started with: what
-                  does it cost to protect something worth protecting?&rdquo;
+                  can&rsquo;t answer quickly. The Repetition series started
+                  with: why do some people achieve mastery and others
+                  don&rsquo;t? The Reality series started with: what happens
+                  when you stop believing and start seeing? The Aztec series
+                  started with: what does it cost to protect something worth
+                  protecting?&rdquo;
                 </p>
               </div>
             </div>
