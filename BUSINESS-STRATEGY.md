@@ -726,6 +726,237 @@ When you're satisfied that everything works:
 
 ---
 
+## Part 13: GitHub & Vercel for Client Projects — Scaling Your Workflow
+
+Your current workflow — build in Next.js, push to GitHub, Vercel deploys automatically — is exactly the right approach for a business. You do NOT need WordPress. You do NOT need to change your tech stack. What changes is how you **organise accounts, repos, and billing** so that your personal projects and client projects don't get tangled up.
+
+### Your Current Setup
+
+- **GitHub:** Personal account (ketankshukla) with repos for your own sites
+- **Vercel:** Personal account connected to your GitHub, auto-deploys on push
+- **Sites:** ketanshukla.com, aztec.ketanshukla.com, repetition.ketanshukla.com, reality.ketanshukla.com
+- **Domains:** Managed through your own accounts
+- **Cost:** GitHub free tier, Vercel free/hobby tier
+
+This works perfectly for your own projects. For client projects, you need to decide who owns what.
+
+### The Core Question: Who Owns the Client's Site?
+
+There are two models. Both work. The right choice depends on whether you want to hand off the project completely or maintain an ongoing relationship.
+
+#### Model A: Client Owns Everything (Build & Hand Off)
+
+You build the site, then transfer ownership to the client. They own the repo, the Vercel project, and the domain. You walk away after delivery (unless they buy updates from your Stripe store).
+
+**How it works:**
+
+1. Create a new GitHub repo under YOUR account during development (e.g., `ketankshukla/client-jane-author-site`)
+2. Build the site, push to GitHub, deploy on YOUR Vercel for development/preview
+3. When the site is finished and paid for, **transfer the repo** to the client's GitHub account (or create one for them)
+4. Client connects their own Vercel account (free hobby tier) to their repo
+5. Point their custom domain to their Vercel deployment
+6. Done — they own everything. If they want updates later, they buy from your Stripe store and you get temporary access
+
+**Pros:**
+
+- Clean separation — client's site is not on your accounts
+- No ongoing hosting responsibility or cost for you
+- Client has full ownership (some clients insist on this)
+
+**Cons:**
+
+- Client needs a GitHub account and a Vercel account (you may need to set these up for them)
+- If they break something, it's their problem unless they pay for support
+- You lose the ongoing relationship unless they come back for updates
+
+**Best for:** One-time website builds where the client wants full control
+
+#### Model B: You Own & Manage Everything (Recommended for Recurring Revenue)
+
+You keep the repo and the Vercel project on YOUR accounts. The client pays you for hosting and maintenance. They get a live website with their custom domain, but you control the infrastructure.
+
+**How it works:**
+
+1. Create a GitHub repo under your account (e.g., `ketankshukla/client-jane-author-site`)
+2. Build the site, deploy on your Vercel account
+3. Add the client's custom domain to the Vercel project
+4. Client's site is live at their domain (e.g., janesmith-author.com)
+5. Client pays a monthly maintenance retainer (from your Stripe store) that covers hosting management + updates
+6. When they need changes, they buy the specific update from your Stripe store, you push to GitHub, Vercel auto-deploys
+
+**Pros:**
+
+- Recurring revenue — every client site is a monthly retainer
+- You maintain full control — no risk of the client breaking their own site
+- Simpler for the client — they don't need to know what GitHub or Vercel is
+- You can update all client sites from one place
+- Professional service model — similar to how agencies operate
+
+**Cons:**
+
+- You're responsible for uptime and hosting
+- Your Vercel account needs to handle more projects (may need a paid plan)
+- If you disappear, the client's site is stuck on your account
+
+**Best for:** Ongoing client relationships, maintenance retainers, maximum recurring revenue
+
+### Recommended: Model B with a Business GitHub Organisation
+
+The cleanest approach is to create a **GitHub Organisation** for your business and upgrade your Vercel to a **Team/Pro plan** when you have enough clients to justify it.
+
+### GitHub Structure
+
+```
+GitHub Personal Account: ketankshukla
+├── author-portfolio          (your personal site — ketanshukla.com)
+├── aztec-portfolio           (aztec.ketanshukla.com)
+├── repetition-portfolio      (repetition.ketanshukla.com)
+└── reality-portfolio         (reality.ketanshukla.com)
+
+GitHub Organisation: ketanshukla-studio (or whatever business name you choose)
+├── client-jane-smith         (janesmith-author.com)
+├── client-mark-johnson       (markjohnsonbooks.com)
+├── client-sunrise-publishing (sunrisepublishing.com)
+└── client-templates          (reusable starter templates)
+```
+
+**Why an Organisation?**
+
+- Free to create on GitHub
+- Keeps client repos completely separate from your personal repos
+- You can add collaborators later if you ever hire help
+- Looks professional — clients can see their repo under a business name, not your personal account
+- All client repos are in one place, easy to manage
+
+**How to create it:**
+
+1. Go to github.com → Settings → Organisations → New Organisation
+2. Choose the free plan (unlimited public/private repos)
+3. Name it something professional (your business name)
+4. Create client repos under this organisation
+
+### Vercel Structure
+
+```
+Vercel Personal Account (current — Hobby plan, free)
+├── ketanshukla.com
+├── aztec.ketanshukla.com
+├── repetition.ketanshukla.com
+└── reality.ketanshukla.com
+
+Vercel Team Account (new — Pro plan, $20/month per member)
+├── janesmith-author.com        (client site)
+├── markjohnsonbooks.com        (client site)
+├── sunrisepublishing.com       (client site)
+└── preview.ketanshukla-studio  (demo/staging site)
+```
+
+**Vercel pricing tiers:**
+
+| Plan            | Cost                      | Projects                    | What You Get                                                                                   |
+| --------------- | ------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------- |
+| Hobby (current) | Free                      | Unlimited personal projects | What you have now. Cannot be used commercially.                                                |
+| Pro             | $20/month per team member | Unlimited                   | Commercial use allowed. More bandwidth, build minutes, analytics. Password-protected previews. |
+| Enterprise      | Custom                    | Unlimited                   | Overkill for now.                                                                              |
+
+**Important:** Vercel's Hobby plan **does not allow commercial use**. Once you're deploying client sites and charging for them, you need to be on the **Pro plan ($20/month)**. This is non-negotiable per Vercel's terms of service.
+
+**When to upgrade:**
+
+- Upgrade to Vercel Pro when you land your first paying client whose site you're hosting
+- $20/month is trivially covered by even a single $150/month maintenance retainer
+- Connect the Vercel Team to your GitHub Organisation — auto-deploy works the same way
+
+### Domain Management for Client Sites
+
+Each client will have their own custom domain. Here's how to handle it:
+
+#### Option A: Client Buys Their Own Domain (Recommended)
+
+1. Client purchases their domain from a registrar (Namecheap, Google Domains, Cloudflare, etc.)
+2. You add the domain to the Vercel project
+3. Vercel gives you DNS records (A record, CNAME)
+4. Client updates their domain's DNS settings to point to Vercel (or you do it for them if they give you access)
+5. SSL certificate is automatic — Vercel handles it
+
+**Why this is better:** The client owns their domain. If they ever leave, their domain goes with them. No disputes.
+
+#### Option B: You Buy the Domain on Their Behalf
+
+1. You purchase the domain and charge the client for it (include it in the project cost or bill annually)
+2. You manage DNS and point it to Vercel
+3. If the client leaves, you transfer the domain to them
+
+**Why this is riskier:** Domain ownership disputes are messy. Avoid this unless the client specifically asks you to handle it.
+
+### The Complete Client Project Workflow
+
+Here's exactly what happens from payment to live site:
+
+```
+1. Client buys "Author Portfolio Website — Standard" ($2,000) from your Stripe store
+2. You receive Stripe notification + payment confirmation
+3. You create a new repo: github.com/ketanshukla-studio/client-[name]
+4. You scaffold the Next.js project using your starter template
+5. You build the site (books, covers, bio, series — using assets the client provides)
+6. You push to GitHub → Vercel auto-deploys to a preview URL
+7. You send the client the preview URL for review
+8. Client requests revisions (included — 1-2 rounds in the base price)
+9. You make changes, push again → Vercel auto-deploys updated preview
+10. Client approves
+11. Client's custom domain is pointed to the Vercel project
+12. Site is live
+13. Client optionally subscribes to "Website Maintenance — Basic" ($150/month) via Stripe
+14. Future updates: client buys specific update product from Stripe store → you push changes → Vercel auto-deploys
+```
+
+This is exactly the same workflow you use today for your own sites — just with a client on the other end and a payment step at the beginning.
+
+### Starter Template Strategy
+
+You should create a **reusable Next.js starter template** based on your existing portfolio sites. This dramatically speeds up client project delivery.
+
+```
+ketanshukla-studio/author-site-template
+├── Pre-built components: book showcase, series page, character gallery, author bio
+├── TailwindCSS dark theme (your signature style)
+├── TypeScript data structure for books, series, characters
+├── Responsive design, animations, parallax effects
+├── Vercel deployment config
+├── README with setup instructions
+```
+
+For each new client:
+
+1. Clone the template
+2. Swap in their data (books, covers, bio)
+3. Customise colors, fonts, layout as needed
+4. Deploy
+
+What currently takes you days to build from scratch could take hours with a solid template. The template IS the product — the customisation is the service.
+
+### Cost Summary for Running Client Sites
+
+| Item                           | Cost                       | When                             |
+| ------------------------------ | -------------------------- | -------------------------------- |
+| GitHub Organisation            | Free                       | Now                              |
+| Vercel Pro plan                | $20/month                  | When first client site goes live |
+| Stripe fees                    | 2.9% + 30¢ per transaction | Per payment received             |
+| Domain (if you buy for client) | $10–$15/year per domain    | Per client, annually             |
+| Your time                      | Your biggest cost          | Per project                      |
+
+**Break-even:** A single client on a $150/month maintenance retainer covers your Vercel Pro cost and Stripe fees with plenty left over. By client #3 or #4, the infrastructure costs are negligible compared to revenue.
+
+### What NOT to Change
+
+- **Do NOT switch to WordPress** — your Next.js + Vercel stack is faster, more professional, and more maintainable
+- **Do NOT use shared hosting** — Vercel's edge network is better than any shared hosting provider
+- **Do NOT build client sites on your personal GitHub** — use an Organisation to keep things clean
+- **Do NOT host client sites on your personal Vercel Hobby plan** — commercial use requires Pro
+- **Do NOT give clients direct access to the repo** unless they specifically want Model A (full handoff)
+
+---
+
 ## Summary
 
 - **Sell the complete pipeline**, not individual assets
