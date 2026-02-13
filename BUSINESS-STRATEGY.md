@@ -1052,6 +1052,171 @@ To put this in perspective, here's what your net income looks like for different
 
 ---
 
+## Part 15: Starter Business Focus
+
+Parts 3–14 lay out the full vision. This section defines what you actually launch with. Everything else is parked for later. Focus means saying no to good things so you can do fewer things extremely well.
+
+### What You're Launching With
+
+| Service                                                         | In  | Out            |
+| --------------------------------------------------------------- | --- | -------------- |
+| Ebook cover design                                              | ✅  |                |
+| Paperback wrap covers                                           |     | ❌ (add later) |
+| Series branding (logos, consistent covers, box sets)            | ✅  |                |
+| Series architecture & planning                                  | ✅  |                |
+| Author portfolio websites                                       |     | ❌ (add later) |
+| Video scripts                                                   |     | ❌ (add later) |
+| Children's picture books                                        | ✅  |                |
+| Full pipeline (covers + branding + planning + children's books) | ✅  |                |
+
+### Why This Focus Works
+
+1. **Images are your strongest skill** — ebook covers, series branding, children's book illustrations. This is where your portfolio proof is most impressive.
+2. **Series planning is your unique differentiator** — most cover designers can't plan a series. Most series planners can't design covers. You do both.
+3. **Children's books are a standalone niche** — different audience, different marketing, high-value product. Worth keeping from day one.
+4. **No infrastructure overhead** — no Vercel Pro plan needed, no hosting management, no ongoing maintenance responsibility. You deliver files, not services that require uptime.
+5. **Websites and video scripts can be added later** — once you have steady cover/branding income, expanding into websites and scripts is a natural next step.
+
+### Starter Product Catalogue for Stripe
+
+These are the only products you create in Stripe at launch. Everything else from Part 11 is ignored for now.
+
+#### New Project Orders
+
+| #   | Product Name                                  | Description                                                                 | Price  |
+| --- | --------------------------------------------- | --------------------------------------------------------------------------- | ------ |
+| 1   | Ebook Cover Design                            | Single ebook cover, 1600x2400, 300 DPI, 3 concepts, 1 final                 | $150   |
+| 2   | Ebook Cover Design (Premium)                  | Single ebook cover, premium style, 3 concepts, 2 revision rounds            | $300   |
+| 3   | Series Branding — Starter (3 books)           | Logo + 3 consistent ebook covers + 1 box set cover                          | $500   |
+| 4   | Series Branding — Standard (5 books)          | Logo + 5 consistent ebook covers + box set + thumbnail                      | $900   |
+| 5   | Series Branding — Premium (8+ books)          | Logo + all ebook covers + box set + panoramic + thumbnail + author portrait | $1,500 |
+| 6   | Series Architecture — Small (3 books)         | Series plan, chapter outlines, continuity plan, book descriptions           | $500   |
+| 7   | Series Architecture — Medium (5 books)        | Same as above, larger series                                                | $1,000 |
+| 8   | Series Architecture — Large (8+ books)        | Same as above, full epic-scale series                                       | $2,000 |
+| 9   | Children's Picture Book — Standard (32 pages) | Story + 32 AI-illustrated pages + assembled PDF                             | $1,200 |
+| 10  | Children's Picture Book — Premium (32 pages)  | Same + custom character design + print-ready formatting                     | $2,500 |
+| 11  | Full Pipeline — Starter                       | Series plan (3 books) + 3 ebook covers + branding                           | $1,000 |
+| 12  | Full Pipeline — Standard                      | Series plan (5 books) + 5 ebook covers + full branding                      | $2,200 |
+| 13  | Full Pipeline — Premium                       | Full series plan (8+ books) + all ebook covers + full branding              | $3,500 |
+
+#### Updates & Revisions
+
+| #   | Product Name                            | Description                                              | Price |
+| --- | --------------------------------------- | -------------------------------------------------------- | ----- |
+| 14  | Cover — Minor Revision                  | Text fix, color adjustment, subtitle change              | $35   |
+| 15  | Cover — Major Revision                  | New concept, different style, layout overhaul            | $100  |
+| 16  | Series Branding — Add New Book Cover    | New ebook cover matching existing series style           | $175  |
+| 17  | Series Branding — Logo Refresh          | Updated or redesigned series logo                        | $200  |
+| 18  | Series Branding — New Box Set Cover     | Additional box set or panoramic cover                    | $150  |
+| 19  | Series Plan — Add Book                  | New book outline + chapter structure + continuity update | $200  |
+| 20  | Series Plan — Restructure               | Reorder, split, or merge books in existing plan          | $350  |
+| 21  | Series Plan — Book Description Update   | Updated Amazon/retail description for one book           | $40   |
+| 22  | Children's Book — Page Edits (per page) | Text/story edits with re-illustrated page                | $50   |
+| 23  | Children's Book — Add Pages (per page)  | New illustrated page added to existing book              | $75   |
+| 24  | Children's Book — New Character/Scene   | New character or scene in existing style                 | $100  |
+
+#### Bundles & Add-ons
+
+| #   | Product Name                    | Description                                 | Price       |
+| --- | ------------------------------- | ------------------------------------------- | ----------- |
+| 25  | Rush Fee — 48 Hour Turnaround   | 50% surcharge added to any single product   | 50% of base |
+| 26  | Returning Client Discount — 10% | Applied to any order from a previous client | -10%        |
+
+#### Retainers
+
+| #   | Product Name              | Description                                                        | Price        |
+| --- | ------------------------- | ------------------------------------------------------------------ | ------------ |
+| 27  | Series Expansion Retainer | Ongoing ebook cover additions as new books publish (up to 1/month) | $300/quarter |
+
+**Total: 27 products in Stripe at launch.** Clean, focused, manageable.
+
+### Starter Revenue After Stripe Fees
+
+| #   | Product                                 | Price     | Stripe Fee (2.9% + $0.30) | Your Net Income          |
+| --- | --------------------------------------- | --------- | ------------------------- | ------------------------ |
+| 1   | Ebook Cover Design                      | $150.00   | $4.65                     | $145.35                  |
+| 2   | Ebook Cover Design (Premium)            | $300.00   | $9.00                     | $291.00                  |
+| 3   | Series Branding — Starter (3 books)     | $500.00   | $14.80                    | $485.20                  |
+| 4   | Series Branding — Standard (5 books)    | $900.00   | $26.40                    | $873.60                  |
+| 5   | Series Branding — Premium (8+ books)    | $1,500.00 | $43.80                    | $1,456.20                |
+| 6   | Series Architecture — Small (3 books)   | $500.00   | $14.80                    | $485.20                  |
+| 7   | Series Architecture — Medium (5 books)  | $1,000.00 | $29.30                    | $970.70                  |
+| 8   | Series Architecture — Large (8+ books)  | $2,000.00 | $58.30                    | $1,941.70                |
+| 9   | Children's Picture Book — Standard      | $1,200.00 | $35.10                    | $1,164.90                |
+| 10  | Children's Picture Book — Premium       | $2,500.00 | $72.80                    | $2,427.20                |
+| 11  | Full Pipeline — Starter                 | $1,000.00 | $29.30                    | $970.70                  |
+| 12  | Full Pipeline — Standard                | $2,200.00 | $64.10                    | $2,135.90                |
+| 13  | Full Pipeline — Premium                 | $3,500.00 | $101.80                   | $3,398.20                |
+| 14  | Cover — Minor Revision                  | $35.00    | $1.32                     | $33.68                   |
+| 15  | Cover — Major Revision                  | $100.00   | $3.20                     | $96.80                   |
+| 16  | Series Branding — Add New Book Cover    | $175.00   | $5.38                     | $169.62                  |
+| 17  | Series Branding — Logo Refresh          | $200.00   | $6.10                     | $193.90                  |
+| 18  | Series Branding — New Box Set Cover     | $150.00   | $4.65                     | $145.35                  |
+| 19  | Series Plan — Add Book                  | $200.00   | $6.10                     | $193.90                  |
+| 20  | Series Plan — Restructure               | $350.00   | $10.45                    | $339.55                  |
+| 21  | Series Plan — Book Description Update   | $40.00    | $1.46                     | $38.54                   |
+| 22  | Children's Book — Page Edits (per page) | $50.00    | $1.75                     | $48.25                   |
+| 23  | Children's Book — Add Pages (per page)  | $75.00    | $2.48                     | $72.52                   |
+| 24  | Children's Book — New Character/Scene   | $100.00   | $3.20                     | $96.80                   |
+| 25  | Rush Fee — 48 Hour Turnaround           | Varies    | 2.9% + $0.30              | ~97% of surcharge        |
+| 27  | Series Expansion Retainer (quarterly)   | $300.00   | $9.00                     | $291.00 ($1,164.00/year) |
+
+### Starter Revenue Scenarios
+
+| Scenario                                                         | What You Sell                             | Gross  | Stripe Fees | Net Income |
+| ---------------------------------------------------------------- | ----------------------------------------- | ------ | ----------- | ---------- |
+| 1 cover sale                                                     | 1× Ebook Cover Design                     | $150   | $4.65       | $145.35    |
+| 1 premium cover                                                  | 1× Ebook Cover Design (Premium)           | $300   | $9.00       | $291.00    |
+| 1 series branding                                                | 1× Series Branding — Standard (5 books)   | $900   | $26.40      | $873.60    |
+| 1 series plan                                                    | 1× Series Architecture — Medium (5 books) | $1,000 | $29.30      | $970.70    |
+| 1 children's book                                                | 1× Children's Picture Book — Standard     | $1,200 | $35.10      | $1,164.90  |
+| 1 full pipeline                                                  | 1× Full Pipeline — Standard               | $2,200 | $64.10      | $2,135.90  |
+| Solid month: 3 covers + 1 branding + 1 plan                      | Mixed                                     | $1,850 | $53.85      | $1,796.15  |
+| Great month: 2 pipelines + 2 covers + 1 children's book          | Mixed                                     | $5,900 | $171.35     | $5,728.65  |
+| Busy month: 5 covers + 2 brandings + 2 plans + 1 children's book | Mixed                                     | $5,350 | $155.30     | $5,194.70  |
+
+### Starter Infrastructure Costs
+
+| Item                         | Cost           | Notes                                                                  |
+| ---------------------------- | -------------- | ---------------------------------------------------------------------- |
+| Stripe account               | Free           | No monthly fee. Only pay per transaction.                              |
+| GitHub                       | Free           | Personal account, free tier. No Organisation needed yet.               |
+| Vercel                       | Free           | Hobby plan. You're not hosting client sites — just your own portfolio. |
+| AI image generation          | Varies         | ChatGPT Plus ($20/month) or API costs for image generation             |
+| Domain (ketanshukla.com)     | ~$12/year      | Already have this                                                      |
+| **Total fixed monthly cost** | **~$20/month** | Just ChatGPT Plus. Everything else is free or already paid for.        |
+
+Your only real cost is your time and your AI subscription. Everything a client pays you is almost entirely profit.
+
+### What You Deliver to Clients
+
+No hosting, no websites, no ongoing technical services. You deliver **files**.
+
+| Service                 | What the Client Receives                                                                                         |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Ebook Cover Design      | High-res PNG/JPG files (1600x2400, 300 DPI). 3 concept variations + 1 final polished cover.                      |
+| Series Branding         | Logo files (PNG, SVG). All ebook covers. Box set cover. Panoramic cover. Thumbnail. All as high-res image files. |
+| Series Architecture     | PDF or Google Doc with complete series plan, chapter outlines, continuity notes, book descriptions.              |
+| Children's Picture Book | Assembled PDF (32 pages, print-ready). Individual page image files. Story text document.                         |
+| Full Pipeline           | All of the above combined into a single delivery package.                                                        |
+
+**Delivery method:** Google Drive shared folder, or a ZIP file sent via email. Simple. No hosting infrastructure required.
+
+### When to Expand Beyond Starter
+
+Add the next service tier when:
+
+| Trigger                                                                   | What to Add                                                                     |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| You have 5+ cover/branding clients and feel comfortable with the workflow | Paperback wrap covers ($250 each)                                               |
+| A client asks for a website and you have bandwidth                        | Author portfolio websites ($1,000–$3,000). Upgrade to Vercel Pro at this point. |
+| You have video script examples ready to show                              | Marketing video scripts ($100–$300)                                             |
+| You're consistently earning $3,000+/month from starter services           | All of the above. You're ready for the full catalogue.                          |
+
+Don't add services because they seem like a good idea. Add them because a client is asking and willing to pay.
+
+---
+
 ## Summary
 
 - **Sell the complete pipeline**, not individual assets
