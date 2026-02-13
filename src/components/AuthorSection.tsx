@@ -38,20 +38,41 @@ export default function AuthorSection() {
 
               <p>
                 His published work spans three series and twenty-two books. The{" "}
-                <em className="text-gold/80">Repetition: Mother of Mastery</em>{" "}
+                <a
+                  href="https://repetition.ketanshukla.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold hover:text-gold-light underline underline-offset-2 transition-colors"
+                >
+                  Repetition: Mother of Mastery
+                </a>{" "}
                 series is a five-book non-fiction exploration of the science,
                 psychology, and daily practice of mastery — from neural pathways
                 and habit formation to creative performance and long-term
                 growth. The{" "}
-                <em className="text-gold/80">Reality Without Belief</em> series
-                is a five-book non-fiction work that dismantles the unexamined
-                reverence for belief, faces reality directly, and arrives at the
-                quiet freedom of having nothing left to defend.
+                <a
+                  href="https://reality.ketanshukla.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold hover:text-gold-light underline underline-offset-2 transition-colors"
+                >
+                  Reality Without Belief
+                </a>{" "}
+                series is a five-book non-fiction work that dismantles the
+                unexamined reverence for belief, faces reality directly, and
+                arrives at the quiet freedom of having nothing left to defend.
               </p>
 
               <p>
-                <em className="text-gold/80">Aztec Samurai Adventures</em> is
-                his fiction work — a twelve-book epic fantasy saga spanning
+                <a
+                  href="https://aztec.ketanshukla.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold hover:text-gold-light underline underline-offset-2 transition-colors"
+                >
+                  Aztec Samurai Adventures
+                </a>{" "}
+                is his fiction work — a twelve-book epic fantasy saga spanning
                 three acts. It follows a reluctant warrior and her growing team
                 as they face an empire, forge alliances, lose mentors, and fight
                 a war that tests everything they believe about leadership,
@@ -74,19 +95,6 @@ export default function AuthorSection() {
                 snooker table — another pursuit where patience, precision, and
                 repetition quietly reveal their rewards.
               </p>
-            </div>
-
-            {/* Amazon author link */}
-            <div className="mt-8">
-              <a
-                href="https://www.amazon.com/stores/Ketan-Shukla/author/B0BZ1872FW"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-gold hover:text-gold-light transition-colors text-sm font-medium underline underline-offset-4"
-              >
-                <Globe className="w-4 h-4" />
-                View all books on Amazon
-              </a>
             </div>
           </div>
 
