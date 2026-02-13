@@ -957,6 +957,101 @@ What currently takes you days to build from scratch could take hours with a soli
 
 ---
 
+## Part 14: Revenue After Stripe Fees
+
+Stripe charges **2.9% + $0.30** per successful transaction. Here is the exact fee and your net income for every product in the catalogue.
+
+### New Project Orders
+
+| #   | Product                                   | Price     | Stripe Fee (2.9% + $0.30) | Your Net Income |
+| --- | ----------------------------------------- | --------- | ------------------------- | --------------- |
+| 1   | Ebook Cover Design                        | $150.00   | $4.65                     | $145.35         |
+| 2   | Ebook Cover Design (Premium)              | $300.00   | $9.00                     | $291.00         |
+| 3   | Paperback Wrap Cover                      | $250.00   | $7.55                     | $242.45         |
+| 4   | Ebook + Paperback Cover Bundle            | $400.00   | $11.90                    | $388.10         |
+| 5   | Series Branding — Starter (3 books)       | $500.00   | $14.80                    | $485.20         |
+| 6   | Series Branding — Standard (5 books)      | $900.00   | $26.40                    | $873.60         |
+| 7   | Series Branding — Premium (8+ books)      | $1,500.00 | $43.80                    | $1,456.20       |
+| 8   | Series Architecture — Small (3 books)     | $500.00   | $14.80                    | $485.20         |
+| 9   | Series Architecture — Medium (5 books)    | $1,000.00 | $29.30                    | $970.70         |
+| 10  | Series Architecture — Large (8+ books)    | $2,000.00 | $58.30                    | $1,941.70       |
+| 11  | Author Portfolio Website — Starter        | $1,000.00 | $29.30                    | $970.70         |
+| 12  | Author Portfolio Website — Standard       | $2,000.00 | $58.30                    | $1,941.70       |
+| 13  | Author Portfolio Website — Premium        | $3,000.00 | $87.30                    | $2,912.70       |
+| 14  | Video Script — Book Trailer (3 min)       | $300.00   | $9.00                     | $291.00         |
+| 15  | Video Script — Book Summary (5 min)       | $200.00   | $6.10                     | $193.90         |
+| 16  | Video Script — Short Social Clip (60 sec) | $100.00   | $3.20                     | $96.80          |
+| 17  | Children's Picture Book — Standard        | $1,200.00 | $35.10                    | $1,164.90       |
+| 18  | Children's Picture Book — Premium         | $2,500.00 | $72.80                    | $2,427.20       |
+| 19  | Full Pipeline — Starter                   | $3,000.00 | $87.30                    | $2,912.70       |
+| 20  | Full Pipeline — Standard                  | $5,000.00 | $145.30                   | $4,854.70       |
+| 21  | Full Pipeline — Premium                   | $8,000.00 | $232.30                   | $7,767.70       |
+
+### Updates & Revisions
+
+| #   | Product                                      | Price     | Stripe Fee (2.9% + $0.30) | Your Net Income |
+| --- | -------------------------------------------- | --------- | ------------------------- | --------------- |
+| 22  | Cover — Minor Revision                       | $35.00    | $1.32                     | $33.68          |
+| 23  | Cover — Major Revision                       | $100.00   | $3.20                     | $96.80          |
+| 24  | Cover — Format Conversion                    | $75.00    | $2.48                     | $72.52          |
+| 25  | Series Branding — Add New Book Cover         | $175.00   | $5.38                     | $169.62         |
+| 26  | Series Branding — Logo Refresh               | $200.00   | $6.10                     | $193.90         |
+| 27  | Series Branding — New Box Set Cover          | $150.00   | $4.65                     | $145.35         |
+| 28  | Series Plan — Add Book                       | $200.00   | $6.10                     | $193.90         |
+| 29  | Series Plan — Restructure                    | $350.00   | $10.45                    | $339.55         |
+| 30  | Series Plan — Book Description Update        | $40.00    | $1.46                     | $38.54          |
+| 31  | Website — Content Update                     | $75.00    | $2.48                     | $72.52          |
+| 32  | Website — New Page                           | $350.00   | $10.45                    | $339.55         |
+| 33  | Website — Design Refresh                     | $1,000.00 | $29.30                    | $970.70         |
+| 34  | Website — Bug Fix / Technical Support (1 hr) | $100.00   | $3.20                     | $96.80          |
+| 35  | Video Script — Revision                      | $100.00   | $3.20                     | $96.80          |
+| 36  | Video Script — Format Adaptation             | $75.00    | $2.48                     | $72.52          |
+| 37  | Children's Book — Page Edits (per page)      | $50.00    | $1.75                     | $48.25          |
+| 38  | Children's Book — Add Pages (per page)       | $75.00    | $2.48                     | $72.52          |
+| 39  | Children's Book — New Character/Scene        | $100.00   | $3.20                     | $96.80          |
+
+### Bundles & Add-ons
+
+| #   | Product              | Price   | Stripe Fee (2.9% + $0.30) | Your Net Income |
+| --- | -------------------- | ------- | ------------------------- | --------------- |
+| 40  | New Book Launch Pack | $600.00 | $17.70                    | $582.30         |
+
+### Retainers & Subscriptions (Monthly)
+
+| #   | Product                           | Monthly Price                | Stripe Fee Per Month | Your Net Per Month | Your Net Per Year |
+| --- | --------------------------------- | ---------------------------- | -------------------- | ------------------ | ----------------- |
+| 43  | Website Maintenance — Basic       | $150.00                      | $4.65                | $145.35            | $1,744.20         |
+| 44  | Website Maintenance — Standard    | $300.00                      | $9.00                | $291.00            | $3,492.00         |
+| 45  | Series Expansion Retainer         | $100.00/month ($300/quarter) | $3.20                | $96.80             | $1,161.60         |
+| 46  | Full Pipeline Retainer — Standard | $750.00                      | $22.05               | $727.95            | $8,735.40         |
+| 47  | Full Pipeline Retainer — Premium  | $1,500.00                    | $43.80               | $1,456.20          | $17,474.40        |
+
+### Revenue Scenarios
+
+To put this in perspective, here's what your net income looks like for different client loads:
+
+| Scenario                                              | What You Sell                                 | Gross Revenue   | Total Stripe Fees | Net Income                        |
+| ----------------------------------------------------- | --------------------------------------------- | --------------- | ----------------- | --------------------------------- |
+| 1 client buys a cover                                 | 1× Ebook Cover Design                         | $150.00         | $4.65             | $145.35                           |
+| 1 client buys a website                               | 1× Author Portfolio Website — Standard        | $2,000.00       | $58.30            | $1,941.70                         |
+| 1 client buys the full pipeline                       | 1× Full Pipeline — Standard                   | $5,000.00       | $145.30           | $4,854.70                         |
+| 5 clients buy covers in a month                       | 5× Ebook Cover Design                         | $750.00         | $23.25            | $726.75                           |
+| 3 clients on basic maintenance                        | 3× Website Maintenance — Basic (monthly)      | $450.00/month   | $13.95/month      | $436.05/month ($5,232.60/year)    |
+| 1 premium retainer client                             | 1× Full Pipeline Retainer — Premium (monthly) | $1,500.00/month | $43.80/month      | $1,456.20/month ($17,474.40/year) |
+| Solid month: 2 websites + 3 covers + 2 retainers      | Mixed                                         | $4,900.00       | $142.20           | $4,757.80                         |
+| Great month: 1 full pipeline + 3 covers + 5 retainers | Mixed                                         | $6,200.00       | $179.55           | $6,020.45                         |
+
+### The Bottom Line on Stripe Fees
+
+- Stripe takes roughly **3%** of every transaction
+- On a $100 sale, you lose $3.20 — you keep $96.80
+- On a $1,000 sale, you lose $29.30 — you keep $970.70
+- On a $5,000 sale, you lose $145.30 — you keep $4,854.70
+- On a $150/month retainer, you lose $55.80/year — you keep $1,744.20/year
+- The fees are the cost of having a professional, trusted, instant payment system. No invoicing, no chasing payments, no bounced checks. It's worth it.
+
+---
+
 ## Summary
 
 - **Sell the complete pipeline**, not individual assets
