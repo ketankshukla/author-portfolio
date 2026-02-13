@@ -451,6 +451,158 @@ When a client comes back and asks for changes to work you've already delivered, 
 
 ---
 
+## Part 11: Stripe Storefront — Pay Before Work Begins
+
+The goal is simple: every service, update, and revision is a purchasable item on your website. The client picks what they need, pays through Stripe, and only then does work begin. No invoicing back-and-forth, no chasing payments, no scope ambiguity. They buy a defined product, you deliver it.
+
+### Yes, Stripe Supports This
+
+Stripe offers several features that make this possible:
+
+1. **Stripe Products & Prices** — You create each service as a "product" in your Stripe dashboard with a fixed price. Each product gets a unique ID.
+2. **Stripe Payment Links** — For each product, Stripe generates a shareable payment link. Client clicks it, enters card details, pays. Done. No code required for this — you can literally paste links onto your website.
+3. **Stripe Checkout (embedded)** — For a more polished experience, you embed Stripe Checkout directly into your Next.js website. Client clicks "Buy" on your services page, gets a Stripe checkout form without leaving your site.
+4. **Stripe Customer Portal** — Clients can manage their own subscriptions and payment methods (useful for retainer packages).
+5. **Stripe Recurring Billing** — For retainers and maintenance plans, Stripe handles automatic monthly/quarterly billing.
+
+### How It Works on Your Website
+
+```
+ketanshukla.com/services
+├── /services/book-covers         → lists all cover-related products
+├── /services/series-branding     → lists all branding-related products
+├── /services/series-planning     → lists all planning-related products
+├── /services/author-websites     → lists all website-related products
+├── /services/video-scripts       → lists all script-related products
+├── /services/childrens-books     → lists all children's book products
+├── /services/full-pipeline       → lists premium/bundle products
+└── /services/updates-revisions   → lists all update/revision products
+```
+
+Each page shows the available products as cards with a description, price, and a "Buy Now" button. The button triggers Stripe Checkout. After payment, the client receives a confirmation email and you receive a Stripe notification to begin work.
+
+### Complete Product Catalogue for Stripe
+
+Every item below becomes a separate product in Stripe. This is the full list of everything a client can purchase.
+
+#### New Project Orders
+
+| #   | Product Name                                  | Description                                                                                  | Price  | Type     |
+| --- | --------------------------------------------- | -------------------------------------------------------------------------------------------- | ------ | -------- |
+| 1   | Ebook Cover Design                            | Single ebook cover, 1600x2400, 300 DPI, 3 concepts, 1 final                                  | $150   | One-time |
+| 2   | Ebook Cover Design (Premium)                  | Single ebook cover, premium style, 3 concepts, 2 revision rounds                             | $300   | One-time |
+| 3   | Paperback Wrap Cover                          | Full back + spine + front, print-ready CMYK                                                  | $250   | One-time |
+| 4   | Ebook + Paperback Cover Bundle                | Both formats for one book                                                                    | $400   | One-time |
+| 5   | Series Branding — Starter (3 books)           | Logo + 3 consistent covers + 1 box set cover                                                 | $500   | One-time |
+| 6   | Series Branding — Standard (5 books)          | Logo + 5 consistent covers + box set + thumbnail                                             | $900   | One-time |
+| 7   | Series Branding — Premium (8+ books)          | Logo + all covers + box set + panoramic + thumbnail + author portrait                        | $1,500 | One-time |
+| 8   | Series Architecture — Small (3 books)         | Series plan, chapter outlines, continuity plan, book descriptions                            | $500   | One-time |
+| 9   | Series Architecture — Medium (5 books)        | Same as above, larger series                                                                 | $1,000 | One-time |
+| 10  | Series Architecture — Large (8+ books)        | Same as above, full epic-scale series                                                        | $2,000 | One-time |
+| 11  | Author Portfolio Website — Starter            | Up to 3 pages, book showcase, author bio, responsive design, Vercel deploy                   | $1,000 | One-time |
+| 12  | Author Portfolio Website — Standard           | Up to 8 pages, series pages, character gallery, custom animations                            | $2,000 | One-time |
+| 13  | Author Portfolio Website — Premium            | Unlimited pages, full custom design, blog setup, contact form, SEO                           | $3,000 | One-time |
+| 14  | Video Script — Book Trailer (3 min)           | HeyGen-ready cinematic trailer script with scene direction                                   | $300   | One-time |
+| 15  | Video Script — Book Summary (5 min)           | YouTube/social summary script                                                                | $200   | One-time |
+| 16  | Video Script — Short Social Clip (60 sec)     | TikTok/Reels/Shorts format                                                                   | $100   | One-time |
+| 17  | Children's Picture Book — Standard (32 pages) | Story + 32 AI-illustrated pages + assembled PDF                                              | $1,200 | One-time |
+| 18  | Children's Picture Book — Premium (32 pages)  | Same + custom character design + print-ready formatting                                      | $2,500 | One-time |
+| 19  | Full Pipeline — Starter                       | Series plan (3 books) + covers + branding + basic website                                    | $3,000 | One-time |
+| 20  | Full Pipeline — Standard                      | Series plan (5 books) + covers + branding + standard website + 1 video script                | $5,000 | One-time |
+| 21  | Full Pipeline — Premium                       | Full series plan (8+ books) + all covers + full branding + premium website + 3 video scripts | $8,000 | One-time |
+
+#### Updates & Revisions
+
+| #   | Product Name                                   | Description                                              | Price  | Type     |
+| --- | ---------------------------------------------- | -------------------------------------------------------- | ------ | -------- |
+| 22  | Cover — Minor Revision                         | Text fix, color adjustment, subtitle change              | $35    | One-time |
+| 23  | Cover — Major Revision                         | New concept, different style, layout overhaul            | $100   | One-time |
+| 24  | Cover — Format Conversion                      | Convert ebook cover to paperback wrap (or vice versa)    | $75    | One-time |
+| 25  | Series Branding — Add New Book Cover           | New cover matching existing series style                 | $175   | One-time |
+| 26  | Series Branding — Logo Refresh                 | Updated or redesigned series logo                        | $200   | One-time |
+| 27  | Series Branding — New Box Set Cover            | Additional box set or panoramic cover                    | $150   | One-time |
+| 28  | Series Plan — Add Book                         | New book outline + chapter structure + continuity update | $200   | One-time |
+| 29  | Series Plan — Restructure                      | Reorder, split, or merge books in existing plan          | $350   | One-time |
+| 30  | Series Plan — Book Description Update          | Updated Amazon/retail description for one book           | $40    | One-time |
+| 31  | Website — Content Update                       | Add a book, update bio, swap covers, text changes        | $75    | One-time |
+| 32  | Website — New Page                             | New series page, events page, or similar                 | $350   | One-time |
+| 33  | Website — Design Refresh                       | Theme overhaul, new layout, new animations               | $1,000 | One-time |
+| 34  | Website — Bug Fix / Technical Support (1 hour) | Post-warranty bug fixes or hosting issues                | $100   | One-time |
+| 35  | Video Script — Revision                        | Updated narration, scene direction changes               | $100   | One-time |
+| 36  | Video Script — Format Adaptation               | Convert existing script to different length/platform     | $75    | One-time |
+| 37  | Children's Book — Page Edits (per page)        | Text/story edits with re-illustrated page                | $50    | One-time |
+| 38  | Children's Book — Add Pages (per page)         | New illustrated page added to existing book              | $75    | One-time |
+| 39  | Children's Book — New Character/Scene          | New character or scene in existing style                 | $100   | One-time |
+
+#### Bundles & Add-ons
+
+| #   | Product Name                    | Description                                                        | Price       | Type     |
+| --- | ------------------------------- | ------------------------------------------------------------------ | ----------- | -------- |
+| 40  | New Book Launch Pack            | 1 ebook cover + 1 paperback wrap + 1 video script + website update | $600        | One-time |
+| 41  | Rush Fee — 48 Hour Turnaround   | 50% surcharge added to any single product                          | 50% of base | One-time |
+| 42  | Returning Client Discount — 10% | Applied to any order from a previous client                        | -10%        | One-time |
+
+#### Retainers & Subscriptions
+
+| #   | Product Name                      | Description                                                               | Price        | Type      |
+| --- | --------------------------------- | ------------------------------------------------------------------------- | ------------ | --------- |
+| 43  | Website Maintenance — Basic       | Unlimited minor content updates per month                                 | $150/month   | Recurring |
+| 44  | Website Maintenance — Standard    | Minor updates + 1 new page per month                                      | $300/month   | Recurring |
+| 45  | Series Expansion Retainer         | Ongoing cover additions as new books publish (up to 1/month)              | $300/quarter | Recurring |
+| 46  | Full Pipeline Retainer — Standard | Website maintenance + new covers + descriptions + scripts as needed       | $750/month   | Recurring |
+| 47  | Full Pipeline Retainer — Premium  | Everything in Standard + priority turnaround + quarterly branding refresh | $1,500/month | Recurring |
+
+### Implementation Approach
+
+#### Phase 1: Stripe Payment Links (Immediate — No Code)
+
+1. Create a Stripe account (free — Stripe charges 2.9% + 30¢ per transaction, no monthly fees)
+2. Add every product from the catalogue above into the Stripe dashboard
+3. Generate a Payment Link for each product
+4. Add "Buy Now" buttons to your services pages that link to these Payment Links
+5. This works TODAY with zero code changes to your website
+
+#### Phase 2: Embedded Stripe Checkout (Better UX)
+
+1. Install `@stripe/stripe-js` in your Next.js project
+2. Create API routes that generate Stripe Checkout Sessions
+3. Replace Payment Link buttons with embedded checkout — client stays on your site
+4. Add success/cancel pages that confirm the order
+5. This gives a more professional, seamless experience
+
+#### Phase 3: Client Dashboard (Advanced)
+
+1. Add Stripe Customer Portal so clients can view their orders and manage subscriptions
+2. Build a simple order status page on your site (paid → in progress → delivered)
+3. Automated email confirmations with estimated delivery timelines
+4. This turns your site into a full self-service platform
+
+### Why This Model Works
+
+1. **No unpaid work** — payment is collected before any work begins. No invoicing, no "I'll pay you when it's done," no ghosting after delivery
+2. **Clear scope** — the client bought a specific, defined product. There is no ambiguity about what they're getting
+3. **Professional appearance** — a Stripe checkout page looks like a real business, not a freelancer asking for a bank transfer
+4. **Instant trust** — Stripe is a recognised, trusted payment processor. Clients feel safe entering their card details
+5. **Automatic records** — Stripe provides receipts, invoices, and tax records for both you and the client
+6. **Scalable** — whether you have 1 client or 100, the system works the same way. No manual invoicing
+7. **Recurring revenue** — retainers and subscriptions are billed automatically. You don't have to chase monthly payments
+8. **Stripe fees are reasonable** — 2.9% + 30¢ per transaction. On a $2,000 website order, that's $58.30. The convenience and professionalism are worth far more than that
+
+### What the Client Experience Looks Like
+
+1. Client visits ketanshukla.com and browses your portfolio (sees proof of quality)
+2. Client goes to /services and finds the package they need
+3. Client clicks "Buy Now" on the specific product
+4. Stripe Checkout opens — client enters name, email, card details
+5. Payment is processed immediately
+6. Client receives a confirmation email with order details and estimated delivery timeline
+7. You receive a Stripe notification and begin work
+8. For revisions/updates: client returns to /services/updates-revisions, purchases the specific update they need, same flow
+
+No phone calls. No back-and-forth emails about pricing. No "can you send me an invoice." The price is on the page, the checkout is one click, and work begins after payment. Clean and professional.
+
+---
+
 ## Summary
 
 - **Sell the complete pipeline**, not individual assets
