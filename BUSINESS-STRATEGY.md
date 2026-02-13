@@ -603,6 +603,129 @@ No phone calls. No back-and-forth emails about pricing. No "can you send me an i
 
 ---
 
+## Part 12: Testing with Stripe Test Mode
+
+Stripe has a fully functional **Test Mode** built in. It simulates the entire payment flow — products, checkout, payments, subscriptions, emails, webhooks — without processing any real money. You can test everything end to end before going live.
+
+### How Stripe Test Mode Works
+
+Every Stripe account has two modes:
+
+- **Test Mode** — fake money, fake cards, fake transactions. Nothing is real. Toggle it on from the Stripe dashboard.
+- **Live Mode** — real money, real cards, real transactions. Only switch to this when you're ready.
+
+Both modes are completely separate. Test products, test customers, and test payments never touch your real account. You can test as many times as you want with zero risk.
+
+### Step-by-Step: Testing the Full Flow
+
+#### Step 1: Enable Test Mode
+
+1. Log into your Stripe dashboard at dashboard.stripe.com
+2. In the top-right corner, toggle the switch to **"Test mode"** (it turns orange)
+3. Everything you do from this point is simulated
+
+#### Step 2: Create Test Products
+
+1. Go to **Products** in the Stripe dashboard (still in test mode)
+2. Click **"Add product"**
+3. Create a few products from the Part 11 catalogue to test with, for example:
+   - "Ebook Cover Design" — $150, one-time
+   - "Website Maintenance — Basic" — $150/month, recurring
+   - "Full Pipeline — Standard" — $5,000, one-time
+4. Each product gets a test Price ID (starts with `price_test_...`)
+
+#### Step 3: Generate Test Payment Links
+
+1. For each test product, click **"Create payment link"**
+2. Stripe generates a URL like `https://buy.stripe.com/test_abc123`
+3. Open that link in your browser — you'll see the real checkout page, but in test mode
+
+#### Step 4: Use Test Card Numbers
+
+Stripe provides fake card numbers that simulate different scenarios. No real money is charged.
+
+| Card Number           | What It Simulates                                      |
+| --------------------- | ------------------------------------------------------ |
+| `4242 4242 4242 4242` | Successful payment                                     |
+| `4000 0000 0000 3220` | 3D Secure authentication required (prompts extra step) |
+| `4000 0000 0000 9995` | Payment declined — insufficient funds                  |
+| `4000 0000 0000 0002` | Payment declined — generic decline                     |
+| `4000 0000 0000 0069` | Payment declined — expired card                        |
+| `4000 0000 0000 0127` | Payment declined — incorrect CVC                       |
+
+For all test cards:
+
+- **Expiry date:** any future date (e.g., 12/34)
+- **CVC:** any 3 digits (e.g., 123)
+- **ZIP/postcode:** any valid format (e.g., 12345)
+
+#### Step 5: Complete a Test Purchase
+
+1. Open a test Payment Link
+2. Enter any name and email (use your own email to see the confirmation)
+3. Enter test card `4242 4242 4242 4242`, expiry `12/34`, CVC `123`
+4. Click "Pay"
+5. Payment succeeds — you'll see the success page
+6. Check your email — you'll receive a Stripe receipt (marked as test)
+7. Check your Stripe dashboard — the payment appears under **Payments** (in test mode)
+
+#### Step 6: Test a Subscription
+
+1. Create a test product with recurring pricing (e.g., "Website Maintenance — Basic" at $150/month)
+2. Generate a Payment Link for it
+3. Complete the purchase with a test card
+4. In your Stripe dashboard, go to **Subscriptions** — you'll see the active test subscription
+5. You can simulate the next billing cycle, cancellations, and failed payments from the dashboard
+
+#### Step 7: Test Webhooks (For Embedded Checkout)
+
+If you later build the embedded Stripe Checkout in your Next.js site (Phase 2 from Part 11), you'll want to test webhooks — these are notifications Stripe sends to your server when events happen (payment succeeded, subscription cancelled, etc.).
+
+1. Install the Stripe CLI: `stripe login` from your terminal
+2. Run `stripe listen --forward-to localhost:3000/api/webhooks/stripe`
+3. This forwards test webhook events to your local development server
+4. Make a test purchase — your server receives the event in real time
+5. You can also trigger test events manually: `stripe trigger payment_intent.succeeded`
+
+### What You Can Test in Test Mode
+
+| Scenario                                  | How to Test It                                                            |
+| ----------------------------------------- | ------------------------------------------------------------------------- |
+| Client buys a one-time package            | Create product → Payment Link → test card `4242...`                       |
+| Client buys a subscription/retainer       | Create recurring product → Payment Link → test card                       |
+| Payment is declined                       | Use decline test card `4000 0000 0000 9995`                               |
+| Client's card requires extra verification | Use 3D Secure test card `4000 0000 0000 3220`                             |
+| Subscription renewal                      | Dashboard → Subscriptions → advance clock to next billing date            |
+| Client cancels subscription               | Dashboard → Subscriptions → cancel the test subscription                  |
+| Refund a payment                          | Dashboard → Payments → select payment → issue refund                      |
+| Client receives confirmation email        | Use your real email as the test customer — Stripe sends a test receipt    |
+| You receive payment notification          | Check the Stripe dashboard → Payments, or set up email notifications      |
+| Webhook fires when payment succeeds       | Stripe CLI → `stripe listen` → make test purchase → see event in terminal |
+
+### Test Mode vs Live Mode — The Switch
+
+When you're satisfied that everything works:
+
+1. Go to the Stripe dashboard and toggle **off** test mode (switch back to the default live view)
+2. Create the same products in live mode (or use the Stripe API to copy them)
+3. Replace test Payment Links with live Payment Links on your website
+4. If using embedded checkout, swap the test API keys for live API keys:
+   - Test key: `pk_test_...` → Live key: `pk_live_...`
+   - Test secret: `sk_test_...` → Live secret: `sk_live_...`
+5. Make one real small purchase yourself (e.g., $1 test product) to confirm live mode works
+6. Refund yourself immediately
+7. You're live
+
+### Key Points
+
+- **Test mode is free and unlimited** — test as many times as you want, no charges, no fees
+- **Test and live are completely separate** — test data never appears in live mode and vice versa
+- **Test emails look real** — they arrive in your inbox with full formatting, just marked as "test"
+- **No real money ever moves in test mode** — even if you enter a real card number by accident, Stripe won't charge it in test mode
+- **You can stay in test mode for as long as you need** — there is no deadline to go live
+
+---
+
 ## Summary
 
 - **Sell the complete pipeline**, not individual assets
