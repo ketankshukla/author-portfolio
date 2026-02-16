@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, EB_Garamond } from "next/font/google";
 import "./globals.css";
+import ImageProtection from "@/components/ImageProtection";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -52,6 +53,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${garamond.variable} font-sans antialiased`}
       >
+        <ImageProtection />
         {children}
       </body>
     </html>
