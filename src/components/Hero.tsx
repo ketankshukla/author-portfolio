@@ -22,9 +22,17 @@ export default function Hero() {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-gold/60 text-sm sm:text-base uppercase tracking-[0.3em] font-medium mb-8 animate-fadeInUp">
+          <p className="text-gold/60 text-sm sm:text-base uppercase tracking-[0.3em] font-medium mb-4 animate-fadeInUp">
             Author &bull; Storyteller &bull; Thinker
           </p>
+
+          {/* Amazon KDP badge */}
+          <div className="flex justify-center mb-8 animate-fadeInUp">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/20 bg-gold/5 text-gold/70 text-xs uppercase tracking-widest font-medium">
+              Published exclusively on Amazon &mdash; Kindle &bull; Paperback
+              &bull; Hardcover
+            </span>
+          </div>
 
           {/* Brief intro */}
           <p className="text-cream/50 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mb-12 animate-fadeInUp">

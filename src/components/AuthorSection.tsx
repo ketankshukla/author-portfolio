@@ -37,7 +37,9 @@ export default function AuthorSection() {
               </p>
 
               <p>
-                His published work spans three series and twenty-two books. The{" "}
+                His published work spans three series and twenty-two books,
+                published exclusively on Amazon — available on Kindle,
+                Paperback, and Hardcover. The{" "}
                 <a
                   href="https://repetition.ketanshukla.com"
                   target="_blank"

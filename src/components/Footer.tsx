@@ -25,8 +25,9 @@ export default function Footer() {
               Ketan Shukla
             </h4>
             <p className="text-cream/40 text-sm leading-relaxed">
-              Author of twenty-two books across three series — epic fantasy,
-              the science of mastery, and the philosophy of reality.
+              Author of twenty-two books across three series — epic fantasy, the
+              science of mastery, and the philosophy of reality. All titles
+              published exclusively on Amazon Kindle, Paperback &amp; Hardcover.
             </p>
           </div>
 
