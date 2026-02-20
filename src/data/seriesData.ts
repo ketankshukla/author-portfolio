@@ -5,6 +5,8 @@ export interface Book {
   subtitle: string;
   coverImage: string;
   color: string;
+  kindleUrl?: string;
+  paperbackUrl?: string;
 }
 
 export interface BoxSet {
@@ -50,6 +52,8 @@ export const series: Series[] = [
         subtitle: "A Blade Forged in Light",
         coverImage: "/images/aztec/book-covers/book1-cover.png",
         color: "#40e0d0",
+        kindleUrl: "",
+        paperbackUrl: "",
       },
       {
         id: 2,
@@ -58,6 +62,8 @@ export const series: Series[] = [
         subtitle: "Reflections of Betrayal",
         coverImage: "/images/aztec/book-covers/book2-cover.png",
         color: "#6366f1",
+        kindleUrl: "",
+        paperbackUrl: "",
       },
       {
         id: 3,
@@ -66,6 +72,8 @@ export const series: Series[] = [
         subtitle: "Bonds Written in Blood",
         coverImage: "/images/aztec/book-covers/book3-cover.png",
         color: "#c9913b",
+        kindleUrl: "",
+        paperbackUrl: "",
       },
       {
         id: 4,
@@ -74,6 +82,8 @@ export const series: Series[] = [
         subtitle: "The Darkness Unveiled",
         coverImage: "/images/aztec/book-covers/book4-cover.png",
         color: "#ef4444",
+        kindleUrl: "",
+        paperbackUrl: "",
       },
       {
         id: 5,
@@ -82,6 +92,8 @@ export const series: Series[] = [
         subtitle: "A Spy Among Shadows",
         coverImage: "/images/aztec/book-covers/book5-cover.png",
         color: "#22c55e",
+        kindleUrl: "",
+        paperbackUrl: "",
       },
       {
         id: 6,
@@ -90,6 +102,8 @@ export const series: Series[] = [
         subtitle: "Tides of Dark Magic",
         coverImage: "/images/aztec/book-covers/book6-cover.png",
         color: "#8b5cf6",
+        kindleUrl: "",
+        paperbackUrl: "",
       },
       {
         id: 7,
@@ -98,6 +112,8 @@ export const series: Series[] = [
         subtitle: "Wings of Defiance",
         coverImage: "/images/aztec/book-covers/book7-cover.png",
         color: "#ec4899",
+        kindleUrl: "",
+        paperbackUrl: "",
       },
       {
         id: 8,
@@ -106,6 +122,8 @@ export const series: Series[] = [
         subtitle: "Forged Through Fire",
         coverImage: "/images/aztec/book-covers/book8-cover.png",
         color: "#f59e0b",
+        kindleUrl: "",
+        paperbackUrl: "",
       },
       {
         id: 9,
@@ -114,6 +132,8 @@ export const series: Series[] = [
         subtitle: "The Price of Power",
         coverImage: "/images/aztec/book-covers/book9-cover.png",
         color: "#f97316",
+        kindleUrl: "",
+        paperbackUrl: "",
       },
       {
         id: 10,
@@ -122,6 +142,8 @@ export const series: Series[] = [
         subtitle: "Realm of Shattered Glass",
         coverImage: "/images/aztec/book-covers/book10-cover.png",
         color: "#14b8a6",
+        kindleUrl: "",
+        paperbackUrl: "",
       },
       {
         id: 11,
@@ -130,6 +152,8 @@ export const series: Series[] = [
         subtitle: "The Final Siege",
         coverImage: "/images/aztec/book-covers/book11-cover.png",
         color: "#a855f7",
+        kindleUrl: "",
+        paperbackUrl: "",
       },
       {
         id: 12,
@@ -138,6 +162,8 @@ export const series: Series[] = [
         subtitle: "Dawn of a New World",
         coverImage: "/images/aztec/book-covers/book12-cover.png",
         color: "#eab308",
+        kindleUrl: "",
+        paperbackUrl: "",
       },
     ],
     boxSets: [
@@ -183,6 +209,8 @@ export const series: Series[] = [
         subtitle: "The Science and Psychology of Repetition",
         coverImage: "/images/repetition/book1-cover.png",
         color: "#3b82f6",
+        kindleUrl: "https://www.amazon.com/dp/B0GNYVY3GG",
+        paperbackUrl: "https://www.amazon.com/dp/B0GP6P5423",
       },
       {
         id: 2,
@@ -191,6 +219,8 @@ export const series: Series[] = [
         subtitle: "Building Habits and the Journey to Excellence",
         coverImage: "/images/repetition/book2-cover.png",
         color: "#10b981",
+        kindleUrl: "https://www.amazon.com/dp/B0GNYSFVP7",
+        paperbackUrl: "https://www.amazon.com/dp/B0GP1N17RY",
       },
       {
         id: 3,
@@ -199,6 +229,8 @@ export const series: Series[] = [
         subtitle: "Sports, Arts, and Language",
         coverImage: "/images/repetition/book3-cover.png",
         color: "#f59e0b",
+        kindleUrl: "https://www.amazon.com/dp/B0GNYJ9WHC",
+        paperbackUrl: "https://www.amazon.com/dp/B0GP1CX4D6",
       },
       {
         id: 4,
@@ -207,6 +239,8 @@ export const series: Series[] = [
         subtitle: "Memory, Learning, and Feedback",
         coverImage: "/images/repetition/book4-cover.png",
         color: "#8b5cf6",
+        kindleUrl: "https://www.amazon.com/dp/B0GP1CX4D6",
+        paperbackUrl: "https://www.amazon.com/dp/B0GP21LZFT",
       },
       {
         id: 5,
@@ -215,6 +249,8 @@ export const series: Series[] = [
         subtitle: "Routines, Growth, and Legacy",
         coverImage: "/images/repetition/book5-cover.png",
         color: "#ef4444",
+        kindleUrl: "https://www.amazon.com/dp/B0GNWGD7HG",
+        paperbackUrl: "https://www.amazon.com/dp/B0GP1XPM2B",
       },
     ],
   },
@@ -237,6 +273,8 @@ export const series: Series[] = [
         subtitle: "Why We Believe, Why It Fails, and What It Costs Us",
         coverImage: "/images/reality/book1-cover.png",
         color: "#00CED1",
+        kindleUrl: "https://www.amazon.com/dp/B0GJMP6S72",
+        paperbackUrl: "https://www.amazon.com/dp/B0GN2G1T8Q",
       },
       {
         id: 2,
@@ -245,6 +283,8 @@ export const series: Series[] = [
         subtitle: "Facing Reality Without Interpretation",
         coverImage: "/images/reality/book2-cover.png",
         color: "#009688",
+        kindleUrl: "https://www.amazon.com/dp/B0GMGP1N5N",
+        paperbackUrl: "https://www.amazon.com/dp/B0GNZZCZQN",
       },
       {
         id: 3,
@@ -253,6 +293,8 @@ export const series: Series[] = [
         subtitle: "How Culture Replaces Thinking",
         coverImage: "/images/reality/book3-cover.png",
         color: "#26A69A",
+        kindleUrl: "https://www.amazon.com/dp/B0GMYF5GBK",
+        paperbackUrl: "https://www.amazon.com/dp/B0GNZW5QKX",
       },
       {
         id: 4,
@@ -261,6 +303,8 @@ export const series: Series[] = [
         subtitle: "See, Listen, Decide, Respond",
         coverImage: "/images/reality/book4-cover.png",
         color: "#00BCD4",
+        kindleUrl: "https://www.amazon.com/dp/B0GMY4YNWX",
+        paperbackUrl: "https://www.amazon.com/dp/B0GP6WMY4Y",
       },
       {
         id: 5,
@@ -269,6 +313,8 @@ export const series: Series[] = [
         subtitle: "Freedom, Loneliness, Death, and What Remains",
         coverImage: "/images/reality/book5-cover.png",
         color: "#4DD0E1",
+        kindleUrl: "https://www.amazon.com/dp/B0GMY4MMJN",
+        paperbackUrl: "https://www.amazon.com/dp/B0GP18MZFN",
       },
     ],
   },
