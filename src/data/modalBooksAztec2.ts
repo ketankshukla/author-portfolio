@@ -6,7 +6,7 @@ export const aztecBooks2: ModalBook[] = [
     act: "Act I — The Rising", focusCharacter: "Jagren (Duelist)",
     epigraph: { quote: "Glory is a lie the living tell about the dead.", author: "Jagren, after the Siege of Fortress Ashfall" },
     elaborateDescription: "The allied army's offensive against Fortress Ashfall goes too well — because it's a trap. Nightshade seals the retreat with blood-wards. The Ashvanar brothers unleash dark magic. Hundreds die. Jagren, who dreamed of glory, leads a desperate breakout and kills one of the Ashvanar brothers in a brutal duel — the first villain killed. He nearly dies himself, saved only by Neyla's healing. Volzentar arrives in person, offering 'merciful surrender' with terrifyingly logical arguments. Itzil refuses. Serenthar makes her first physical appearance — she predicted the battle's outcome before it began. Torvane engineers a controlled explosion and Skyren provides aerial evacuation, but the alliance loses a third of its army. Two neutral nations are conquered while the heroes were trapped. The boy who wanted glory found horror instead.",
-    coverImage: "/images/aztec/book4-cover.png", color: "#ef4444",
+    coverImage: "/images/aztec/book-covers/book4-cover.png", color: "#ef4444",
     chapters: [
       { number: 1, title: "The Jaws of the Trap", summary: "The allied army attacks Fortress Ashfall. The initial assault goes too well — the fortress is under-defended. Jagren leads the vanguard inside." },
       { number: 2, title: "Outside the Walls", summary: "Volzentar's trap springs. Nightshade seals the retreat with blood-wards. The Ashvanar brothers unleash dark magic. The army is surrounded." },
@@ -39,7 +39,7 @@ export const aztecBooks2: ModalBook[] = [
     act: "Act II — The Fracture", focusCharacter: "Kaelen (Scout-Spy)",
     epigraph: { quote: "The serpent does not strike where you look — it strikes where you don't.", author: "Valdremor, The Architect" },
     elaborateDescription: "Act II opens with Valdremor — the Architect — taking personal command of Dominion operations. Where Volzentar ruled by charisma and force, Valdremor operates through cold logic and precise strategy. He dispatches forces to seize the fifth relic at Relicara, a sacred cathedral. Kaelen leads the infiltration team while Itzil's forces create a diversion. Rainara, a water-magic wielder freed from Dominion captivity, joins the team and proves devastatingly effective. But Valdremor anticipated every move. The relic is taken by Dominion forces in a surgical strike that makes the heroes' diversion irrelevant. Solkren, a master armorer, begins forging weapons capable of countering Dominion magic. The alliance strengthens even as the enemy coils tighter.",
-    coverImage: "/images/aztec/book5-cover.png", color: "#22c55e",
+    coverImage: "/images/aztec/book-covers/book5-cover.png", color: "#22c55e",
     chapters: [
       { number: 1, title: "The Serpent's Plan", summary: "Kaelen devises a counter-trap to rescue Rainara from Relicara's fortress. Decoy team draws attention while the real team infiltrates underground." },
       { number: 2, title: "Relicara's Cathedral", summary: "Relicara's fortress is a cathedral of stolen artifacts. The team scouts its defenses and discovers the relic collector's obsessive nature." },
@@ -72,7 +72,7 @@ export const aztecBooks2: ModalBook[] = [
     act: "Act II — The Fracture", focusCharacter: "Rainara (Water-Magic Warrior)",
     epigraph: { quote: "When the obsidian rain falls, even the sun hides.", author: "Ancient Proverb of Solquetal" },
     elaborateDescription: "Valdremor's precision strikes shatter the allied base in a coordinated assault of obsidian projectiles and dark sorcery. Korvain, the aging grandmaster, fights his last battle — buying time for the evacuation while his old body finally fails him. Nightshade captures Amalura, the alliance's greatest scholar, to extract the location of the remaining relics. The team is scattered into three groups across the continent. Rainara tracks the fragments of her people's water-magic through corrupted rivers. Skyren flies reconnaissance while Korvain clings to life. Neyla makes a breakthrough in reversing ash-oaths. Miyako resolves to fight rather than hide. As the groups struggle to reunite, Helisar expands his ash-oath operations and Serenthar whispers through Amalura's dreams. The long dark has begun.",
-    coverImage: "/images/aztec/book6-cover.png", color: "#8b5cf6",
+    coverImage: "/images/aztec/book-covers/book6-cover.png", color: "#8b5cf6",
     chapters: [
       { number: 1, title: "The Obsidian Sky", summary: "Valdremor attacks the allied base with surgical precision — obsidian shards rain from the sky, cutting through wards. Rainara's water-magic is the primary defense." },
       { number: 2, title: "Valdremor's Precision", summary: "The assault is methodical and overwhelming. Valdremor targets communications first, then supply lines, then escape routes. He assigns three sorcerer teams to suppress Rainara." },

@@ -6,7 +6,7 @@ export const aztecBooks3: ModalBook[] = [
     act: "Act II — The Fracture", focusCharacter: "Skyren (Aerial Scout)",
     epigraph: { quote: "Between feathers and bone, the sky remembers who dared to fly.", author: "Skyren, riding Cielovar over the burning continent" },
     elaborateDescription: "Skyren takes center stage as the alliance's aerial operations become critical. Riding her hawk Cielovar, she coordinates reconnaissance and evacuation across the war-torn continent. Meanwhile, Miyako — the exile sensei who taught Kaelen the shadow-step — descends into Helisar's factory city to destroy his ash-oath production from within. Neyla pushes her healing abilities to their limits reversing mass ash-oaths. Helisar is fascinated by Neyla's power and attempts to study her. Miyako's infiltration succeeds, but at a terrible cost: she makes her final stand to protect the team's escape, fulfilling her redemption arc from exile to hero. Her death galvanizes the alliance. As the army mobilizes for the march south, Korvain and Miyako share one last conversation about duty and sacrifice.",
-    coverImage: "/images/aztec/book7-cover.png", color: "#ec4899",
+    coverImage: "/images/aztec/book-covers/book7-cover.png", color: "#ec4899",
     chapters: [
       { number: 1, title: "Wings Over War", summary: "Skyren flies reconnaissance across the continent, mapping devastation and troop positions. Each flight is a gauntlet of hawk-killers and war-raptors." },
       { number: 2, title: "Miyako's Decision", summary: "Miyako asks to return to Kanezawa — her home city now under Helisar's control. Her farewell to Itzil: 'You don't need to be perfect. You just need to be there.'" },
@@ -39,7 +39,7 @@ export const aztecBooks3: ModalBook[] = [
     act: "Act II — The Fracture", focusCharacter: "Itzil (Commander)",
     epigraph: { quote: "A blade does not choose to break. It breaks when the hand that holds it forgets why it fights.", author: "Korvain's final words to Itzil" },
     elaborateDescription: "The darkest book of the saga. Racing south to reach an ancient temple that holds the Sunheart — a relic that could turn the war — Itzil confronts Nightshade in a brutal duel. The assassin uses a dark ritual to corrupt the Sun-Blade's light, and the weapon shatters in Itzil's hands. Without her blade, Itzil fights with nothing but her fists and her will. In the aftermath, Korvain — wounded, declining, but still teaching — speaks his last words and dies peacefully in Itzil's arms. This is rock bottom. The blade is broken, the mentor is gone, the army is demoralized. Kaelen's words pierce the darkness: 'You don't need a blade to be who you are.' Solkren notices something in the shattered fragments. Valdremor broadcasts a message offering merciful surrender. The army must decide. Itzil makes a promise at Korvain's pyre: they will march to the Dominion capital and end this war.",
-    coverImage: "/images/aztec/book8-cover.png", color: "#f59e0b",
+    coverImage: "/images/aztec/book-covers/book8-cover.png", color: "#f59e0b",
     chapters: [
       { number: 1, title: "The Race South", summary: "The alliance races south toward the Sun-Blade temple. Miyako's death is days old. Korvain rides in a wagon — mind sharp, body failing." },
       { number: 2, title: "Korvain's Last Map", summary: "Korvain briefs Itzil on the temple's three levels. The wards test the bearer's soul, not combat. 'It shows you what you fear most. If you lie, it kills you.'" },
@@ -72,7 +72,7 @@ export const aztecBooks3: ModalBook[] = [
     act: "Act III — The Reckoning", focusCharacter: "Solkren (Armorer)",
     epigraph: { quote: "Every blade remembers the fire that made it. This one will remember the souls who chose to burn.", author: "Solkren, Master Armorer" },
     elaborateDescription: "Solkren reveals his secret: he can reforge the Sun-Blade, but not with metal alone. The new blade must be forged from the memories and essence of those who fight beside Itzil. Each team member contributes a memory to the forge — their deepest truth, their reason for fighting. Itzil contributes her memory of Korvain. Kaelen contributes his survivor's guilt. Jagren sacrifices his vanity. Neyla offers her compassion. Rainara burns her rage. In parallel, Kaelen leads a daring rescue mission to extract Amalura from Dominion captivity. The rescue succeeds, but Nightshade's fury is unleashed. The new Sun-Blade is born — different from the original, carrying the weight and warmth of every soul who forged it. Amalura reveals what she learned in captivity: the Great Gate's true nature and the role of the oracle Serenthar. The army marches toward the Dominion capital.",
-    coverImage: "/images/aztec/book9-cover.png", color: "#f97316",
+    coverImage: "/images/aztec/book-covers/book9-cover.png", color: "#f97316",
     chapters: [
       { number: 1, title: "The Armorer's Secret", summary: "Solkren reveals the blade fragments still resonate — dormant, not dead. Ancient texts prove the blade was always meant to break and be reforged." },
       { number: 2, title: "The Proposal", summary: "Solkren explains the soul-forge: each hero gives a defining memory to the blade. Risk for contributors: emotional discomfort. Risk for Solkren: it could kill him." },

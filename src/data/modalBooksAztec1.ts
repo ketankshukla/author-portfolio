@@ -6,7 +6,7 @@ export const aztecBooks1: ModalBook[] = [
     act: "Act I — The Rising", focusCharacter: "Itzil (Commander)",
     epigraph: { quote: "The blade that protects is sharper than the blade that conquers.", author: "Korvain, Last Grandmaster of the Sun-Blade Order" },
     elaborateDescription: "When Dominion soldiers raid her village and steal the Ember Core — one of seven sacred relics — Itzil, a young warrior-in-training at the Sun-Blade temple, is thrust into a prophecy she doesn't want. Trained by the aging grandmaster Korvain, she must learn to manifest the Sun-Blade, a weapon forged from pure sunlight and conviction. Gathering allies — the cocky scout Kaelen, the glory-seeking duelist Jagren, the quiet engineer Torvane, and the compassionate healer Neyla — Itzil leads her first strike against a Dominion outpost and comes face to face with Nightshade, a blood-magic assassin who offers her a deal she refuses. As Volzentar deploys his beast commander Gravok, the horizon darkens with the shadow of an army that will test everything Itzil believes about leadership, courage, and sacrifice.",
-    coverImage: "/images/aztec/book1-cover.png", color: "#40e0d0",
+    coverImage: "/images/aztec/book-covers/book1-cover.png", color: "#40e0d0",
     chapters: [
       { number: 1, title: "The Edge of Smoke", summary: "Itzil trains with Korvain at the Sun-Blade temple. Dominion soldiers raid the village below — her first real combat. The raid was a diversion to breach the temple." },
       { number: 2, title: "Fire in the Valley", summary: "The Ember Core is stolen from the temple vault. Korvain reveals the seven relics can open the Great Gate. Itzil is sent to gather allies." },
@@ -39,7 +39,7 @@ export const aztecBooks1: ModalBook[] = [
     act: "Act I — The Rising", focusCharacter: "Kaelen (Scout)",
     epigraph: { quote: "Trust is a mirror — once cracked, every reflection is a lie.", author: "Miyako, The Exile Sensei" },
     elaborateDescription: "Gravok's beast army strikes three cities simultaneously through mirror-portals — shimmering doorways that let his forces appear anywhere. Kaelen infiltrates Dominion territory alone, discovering the portals are powered by crystallized human souls. In the occupied town of Mirravale, he meets Miyako — an exile sensei who teaches him the shadow-step technique. Together they destroy the mirror-anchor, collapsing every portal across the continent. Itzil defeats and captures Gravok, choosing mercy over execution. But in the aftermath, Amalura examines the anchor fragments and goes pale: these devices are older than the Dominion. The enemy is collecting parts to rebuild the Great Gate — a sealed portal to something terrible. A captured officer whispers a name that chills the blood: Serenthar, the Weeping One.",
-    coverImage: "/images/aztec/book2-cover.png", color: "#6366f1",
+    coverImage: "/images/aztec/book-covers/book2-cover.png", color: "#6366f1",
     chapters: [
       { number: 1, title: "The Army on the Move", summary: "Gravok's army marches on three cities. Itzil refuses to abandon any, splitting forces. Kaelen is sent behind enemy lines to find the force multiplier." },
       { number: 2, title: "Mirrors and Smoke", summary: "Kaelen infiltrates Dominion territory and discovers twenty-six mirror-portals enabling instant troop transport. He escapes Gravok and collapses delivering the intel." },
@@ -72,7 +72,7 @@ export const aztecBooks1: ModalBook[] = [
     act: "Act I — The Rising", focusCharacter: "Zariel (Diplomat-Spymaster)",
     epigraph: { quote: "The deadliest weapon in any war is not a blade — it is a well-placed word.", author: "Zariel, before the Grand Summit" },
     elaborateDescription: "Diplomacy becomes the battlefield as Zariel faces Pearlvaine — a demon-bound diplomat who doesn't lie but rearranges truths with devastating precision. At the Grand Summit of neutral nations, Zariel needs proof of Dominion atrocities: a freed ash-oath slave to testify. While he works the political arena, Itzil leads a strike against Helisar's 'sanctuary' — actually an ash-oath factory run by a fallen saint whose gentle kindness masks utter monstrosity. The freed slave's testimony devastates Pearlvaine's position, but the demon-diplomat pivots: she holds Zariel's younger sister hostage. Zariel makes the hardest choice of his life — the alliance over his sister's safety. Kaelen's rescue mission succeeds. Three of five neutral nations join the alliance. But Volzentar has been watching through a spy, and he knows every detail of their plans.",
-    coverImage: "/images/aztec/book3-cover.png", color: "#c9913b",
+    coverImage: "/images/aztec/book-covers/book3-cover.png", color: "#c9913b",
     chapters: [
       { number: 1, title: "The Golden Tongue", summary: "Zariel arrives at the neutral summit in Veranthos. He must convince five nations to join the alliance against the Dominion's demon-bound diplomat Pearlvaine." },
       { number: 2, title: "The Demon Diplomat", summary: "Pearlvaine is introduced — she doesn't lie but rearranges truths with devastating precision. Zariel realizes he can't out-talk her without proof of Dominion atrocities." },
