@@ -47,7 +47,7 @@ export default function Footer() {
                   Visit Website
                 </a>
                 <a
-                  href="https://www.amazon.com"
+                  href={s.seriesUrl ?? "https://www.amazon.com"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-cream/40 hover:text-gold transition-colors text-sm"
