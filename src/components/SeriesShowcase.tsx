@@ -9,8 +9,10 @@ import {
 } from "lucide-react";
 import { series } from "@/data/seriesData";
 import type { Series } from "@/data/seriesData";
+import { useBook } from "@/context/BookContext";
 
 function SeriesFrame({ s }: { s: Series }) {
+  const { openBook } = useBook();
   return (
     <div className="gold-frame p-6 sm:p-8 lg:p-10 mb-16 last:mb-0">
       {/* Series header badge */}
@@ -120,8 +122,10 @@ function SeriesFrame({ s }: { s: Series }) {
                       key={book.id}
                       book={book}
                       bookIndex={bookIndex}
+                      seriesId={s.id}
                       siteUrl={s.siteUrl}
                       accentColor={s.accentColor}
+                      onOpenModal={() => openBook(s.id, bookIndex)}
                     />
                   );
                 })}
@@ -139,8 +143,10 @@ function SeriesFrame({ s }: { s: Series }) {
               key={book.id}
               book={book}
               bookIndex={index}
+              seriesId={s.id}
               siteUrl={s.siteUrl}
               accentColor={s.accentColor}
+              onOpenModal={() => openBook(s.id, index)}
             />
           ))}
         </div>
@@ -152,8 +158,10 @@ function SeriesFrame({ s }: { s: Series }) {
 function BookCard({
   book,
   bookIndex,
+  seriesId,
   siteUrl,
   accentColor,
+  onOpenModal,
 }: {
   book: {
     id: number;
@@ -166,17 +174,17 @@ function BookCard({
     paperbackUrl?: string;
   };
   bookIndex: number;
+  seriesId: string;
   siteUrl: string;
   accentColor: string;
+  onOpenModal: () => void;
 }) {
   return (
     <div className="group glass rounded-xl overflow-hidden hover-lift">
-      {/* Book cover — click opens book details */}
-      <a
-        href={`${siteUrl}?book=${bookIndex}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block relative overflow-hidden"
+      {/* Book cover — click opens modal */}
+      <button
+        onClick={onOpenModal}
+        className="block relative overflow-hidden w-full text-left"
       >
         <img
           src={book.coverImage}
@@ -192,7 +200,7 @@ function BookCard({
             View Details
           </span>
         </div>
-      </a>
+      </button>
 
       {/* Buttons */}
       <div className="p-2 sm:p-3 flex flex-col gap-1.5">
@@ -219,11 +227,9 @@ function BookCard({
           <BookMarked className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
           Buy Paperback
         </a>
-        <a
-          href={`${siteUrl}?book=${bookIndex}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-1.5 rounded-full border px-3 py-1.5 sm:py-2 text-[10px] sm:text-xs font-medium transition-all active:scale-95"
+        <button
+          onClick={onOpenModal}
+          className="flex items-center justify-center gap-1.5 rounded-full border px-3 py-1.5 sm:py-2 text-[10px] sm:text-xs font-medium transition-all active:scale-95 w-full"
           style={{
             borderColor: `${accentColor}4D`,
             backgroundColor: `${accentColor}0D`,
@@ -232,7 +238,7 @@ function BookCard({
         >
           <BookOpen className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
           Book Details
-        </a>
+        </button>
       </div>
     </div>
   );

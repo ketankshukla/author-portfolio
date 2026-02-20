@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Inter, EB_Garamond } from "next/font/google";
 import "./globals.css";
 import ImageProtection from "@/components/ImageProtection";
+import { BookProvider } from "@/context/BookContext";
+import BookModal from "@/components/BookModal";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -53,8 +55,11 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${garamond.variable} font-sans antialiased`}
       >
-        <ImageProtection />
-        {children}
+        <BookProvider>
+          <ImageProtection />
+          {children}
+          <BookModal />
+        </BookProvider>
       </body>
     </html>
   );
