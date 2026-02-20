@@ -69,12 +69,12 @@ function SeriesFrame({ s }: { s: Series }) {
       {/* Buy the Series button */}
       <div className="text-center mb-10">
         <a
-          href="https://www.amazon.com"
+          href={s.siteUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-amazon text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3"
         >
-          <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5" />
+          <Tablet className="w-4 h-4 sm:w-5 sm:h-5" />
           Buy This Series on Amazon
         </a>
       </div>
@@ -103,12 +103,12 @@ function SeriesFrame({ s }: { s: Series }) {
               {/* Buy Box Set button */}
               <div className="text-center mb-6">
                 <a
-                  href="https://www.amazon.com"
+                  href={s.siteUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-amazon text-xs sm:text-sm px-5 sm:px-6 py-2"
                 >
-                  <ShoppingCart className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   Buy {boxSet.title}
                 </a>
               </div>
