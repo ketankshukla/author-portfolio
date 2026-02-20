@@ -1,6 +1,12 @@
 "use client";
 
-import { ExternalLink, Tablet, BookMarked } from "lucide-react";
+import {
+  ExternalLink,
+  Tablet,
+  BookMarked,
+  BookOpen,
+  Library,
+} from "lucide-react";
 import { series } from "@/data/seriesData";
 import type { Series } from "@/data/seriesData";
 
@@ -69,14 +75,17 @@ function SeriesFrame({ s }: { s: Series }) {
       {/* Buy the Series button */}
       {(s.seriesUrl || s.siteUrl) && (
         <div className="text-center mb-10">
+          <p className="text-cream/40 text-xs uppercase tracking-[0.25em] font-medium mb-4">
+            Own the complete series
+          </p>
           <a
             href={s.seriesUrl ?? s.siteUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-amazon text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3"
+            className="inline-flex items-center justify-center gap-3 rounded-lg bg-[#FF9900] px-8 py-3 text-sm font-bold tracking-wide text-black transition-all duration-200 hover:bg-[#e68a00] hover:shadow-lg hover:shadow-[#FF9900]/20 active:scale-95"
           >
-            <Tablet className="w-4 h-4 sm:w-5 sm:h-5" />
-            Buy This Series on Amazon
+            <Library className="w-4 h-4 shrink-0" />
+            Buy The Complete Series on Amazon
           </a>
         </div>
       )}
@@ -101,19 +110,6 @@ function SeriesFrame({ s }: { s: Series }) {
                   />
                 </div>
               </a>
-
-              {/* Buy Box Set button */}
-              <div className="text-center mb-6">
-                <a
-                  href={s.siteUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-amazon text-xs sm:text-sm px-5 sm:px-6 py-2"
-                >
-                  <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                  Buy {boxSet.title}
-                </a>
-              </div>
 
               {/* Books in this box set */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
@@ -173,11 +169,9 @@ function BookCard({
   siteUrl: string;
   accentColor: string;
 }) {
-  const hasLinks = book.kindleUrl && book.paperbackUrl;
-
   return (
     <div className="group glass rounded-xl overflow-hidden hover-lift">
-      {/* Book cover — links to site with book index */}
+      {/* Book cover — click opens book details */}
       <a
         href={`${siteUrl}?book=${bookIndex}`}
         target="_blank"
@@ -194,7 +188,7 @@ function BookCard({
             className="text-xs font-medium flex items-center gap-1.5"
             style={{ color: accentColor }}
           >
-            <ExternalLink className="w-3.5 h-3.5" />
+            <BookOpen className="w-3.5 h-3.5" />
             View Details
           </span>
         </div>
@@ -202,48 +196,43 @@ function BookCard({
 
       {/* Buttons */}
       <div className="p-2 sm:p-3 flex flex-col gap-1.5">
-        {hasLinks ? (
-          <>
-            <a
-              href={book.kindleUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 w-full rounded-lg bg-[#FF9900] py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold tracking-wide text-black transition-all duration-200 hover:bg-[#e68a00] active:scale-95"
-            >
-              <Tablet className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
-              Buy Kindle
-            </a>
-            <a
-              href={book.paperbackUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 w-full rounded-lg border py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold tracking-wide transition-all duration-200 active:scale-95"
-              style={{
-                borderColor: `${accentColor}66`,
-                backgroundColor: `${accentColor}18`,
-                color: accentColor,
-              }}
-            >
-              <BookMarked className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
-              Buy Paperback
-            </a>
-          </>
-        ) : (
-          <a
-            href={siteUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-1.5 w-full rounded-lg border py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold tracking-wide transition-all duration-200 active:scale-95"
-            style={{
-              borderColor: `${accentColor}66`,
-              backgroundColor: `${accentColor}18`,
-              color: accentColor,
-            }}
-          >
-            <ExternalLink className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
-            View Book
-          </a>
-        )}
+        <a
+          href={book.kindleUrl || "https://www.amazon.com"}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-1.5 w-full rounded-lg bg-[#FF9900] py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold tracking-wide text-black transition-all duration-200 hover:bg-[#e68a00] active:scale-95"
+        >
+          <Tablet className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
+          Buy Kindle
+        </a>
+        <a
+          href={book.paperbackUrl || "https://www.amazon.com"}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-1.5 w-full rounded-lg border py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold tracking-wide transition-all duration-200 active:scale-95"
+          style={{
+            borderColor: `${accentColor}66`,
+            backgroundColor: `${accentColor}18`,
+            color: accentColor,
+          }}
+        >
+          <BookMarked className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
+          Buy Paperback
+        </a>
+        <a
+          href={`${siteUrl}?book=${bookIndex}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-1.5 rounded-full border px-3 py-1.5 sm:py-2 text-[10px] sm:text-xs font-medium transition-all active:scale-95"
+          style={{
+            borderColor: `${accentColor}4D`,
+            backgroundColor: `${accentColor}0D`,
+            color: accentColor,
+          }}
+        >
+          <BookOpen className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
+          Book Details
+        </a>
       </div>
     </div>
   );
