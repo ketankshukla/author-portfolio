@@ -23,6 +23,7 @@ export interface Series {
   tagline: string;
   description: string;
   siteUrl: string;
+  seriesUrl?: string;
   logo: string;
   landscapeCover: string;
   accentColor: string;
@@ -197,6 +198,7 @@ export const series: Series[] = [
     description:
       "A five-book journey from the science of repetition to the mastery of life. Discover the neuroscience, habits, real-world proof, cognitive techniques, and life integration that transform ordinary practice into extraordinary mastery.",
     siteUrl: "https://repetition.ketanshukla.com",
+    seriesUrl: "https://www.amazon.com/dp/B0GNZ7B92N",
     logo: "/images/repetition/series-logo-repetition-mother-of-mastery.png",
     landscapeCover: "/images/repetition/complete-series-cover-landscape.png",
     accentColor: "#d4a843",
@@ -239,7 +241,7 @@ export const series: Series[] = [
         subtitle: "Memory, Learning, and Feedback",
         coverImage: "/images/repetition/book4-cover.png",
         color: "#8b5cf6",
-        kindleUrl: "https://www.amazon.com/dp/B0GP1CX4D6",
+        kindleUrl: "https://www.amazon.com/dp/B0GNWZSFHJ",
         paperbackUrl: "https://www.amazon.com/dp/B0GP21LZFT",
       },
       {
@@ -261,6 +263,7 @@ export const series: Series[] = [
     description:
       "A five-book journey from the failure of belief to the freedom of reality. Dismantle belief, face reality directly, expose cultural conviction, develop clear seeing, and discover what remains when there is nothing left to defend.",
     siteUrl: "https://reality.ketanshukla.com",
+    seriesUrl: "https://www.amazon.com/dp/B0GMXS6LHQ",
     logo: "/images/reality/series-logo-reality-without-belief.png",
     landscapeCover: "/images/reality/complete-series-cover-landscape.png",
     accentColor: "#00CED1",

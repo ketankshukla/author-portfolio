@@ -67,17 +67,19 @@ function SeriesFrame({ s }: { s: Series }) {
       </p>
 
       {/* Buy the Series button */}
-      <div className="text-center mb-10">
-        <a
-          href={s.siteUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-amazon text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3"
-        >
-          <Tablet className="w-4 h-4 sm:w-5 sm:h-5" />
-          Buy This Series on Amazon
-        </a>
-      </div>
+      {(s.seriesUrl || s.siteUrl) && (
+        <div className="text-center mb-10">
+          <a
+            href={s.seriesUrl ?? s.siteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-amazon text-sm sm:text-base px-6 sm:px-8 py-2.5 sm:py-3"
+          >
+            <Tablet className="w-4 h-4 sm:w-5 sm:h-5" />
+            Buy This Series on Amazon
+          </a>
+        </div>
+      )}
 
       {/* Box sets (Aztec only) */}
       {s.boxSets && s.boxSets.length > 0 && (
