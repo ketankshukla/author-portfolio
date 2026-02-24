@@ -24,9 +24,11 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Ketan Shukla — Author of Fiction & Non-Fiction Book Series",
+  metadataBase: new URL("https://www.ketanshukla.com"),
+  title:
+    "Ketan Shukla — Author of 22 Books Across 3 Series | Epic Fantasy & Non-Fiction",
   description:
-    "Explore the published works of Ketan Shukla: Aztec Samurai Adventures (12-book epic fantasy), Repetition: Mother of Mastery (5-book non-fiction), and Reality Without Belief (5-book non-fiction). Twenty-two books across three series.",
+    "Published Amazon author of 22 books across 3 series: Aztec Samurai Adventures (12-book epic fantasy), Repetition: Mother of Mastery (5-book non-fiction on mastery), and Reality Without Belief (5-book non-fiction on philosophy). Available on Kindle, Paperback & Hardcover.",
   keywords: [
     "Ketan Shukla",
     "author",
@@ -39,9 +41,36 @@ export const metadata: Metadata = {
     "epic fantasy",
     "self-improvement",
     "philosophy",
+    "Amazon KDP author",
+    "indie author",
+    "published author",
   ],
   icons: {
     icon: "/favicon.svg",
+  },
+  openGraph: {
+    title: "Ketan Shukla — Author of 22 Books Across 3 Series",
+    description:
+      "Published Amazon author of 22 books: Aztec Samurai Adventures (epic fantasy), Repetition: Mother of Mastery (non-fiction), and Reality Without Belief (philosophy). Kindle, Paperback & Hardcover.",
+    url: "https://www.ketanshukla.com",
+    siteName: "Ketan Shukla",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/images/ketan-shukla.jpeg",
+        width: 400,
+        height: 400,
+        alt: "Ketan Shukla — Author",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Ketan Shukla — Author of 22 Books Across 3 Series",
+    description:
+      "Published Amazon author of 22 books: Aztec Samurai Adventures (epic fantasy), Repetition: Mother of Mastery (non-fiction), and Reality Without Belief (philosophy).",
+    images: ["/images/ketan-shukla.jpeg"],
   },
 };
 
@@ -55,6 +84,44 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${garamond.variable} font-sans antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Person",
+                  name: "Ketan Shukla",
+                  url: "https://www.ketanshukla.com",
+                  image: "https://www.ketanshukla.com/images/ketan-shukla.jpeg",
+                  jobTitle: "Author",
+                  description:
+                    "Published Amazon author of 22 books across 3 series — epic fantasy, the science of mastery, and the philosophy of reality.",
+                  knowsAbout: [
+                    "Fiction Writing",
+                    "Non-Fiction Writing",
+                    "Epic Fantasy",
+                    "Self-Improvement",
+                    "Philosophy",
+                    "Book Series",
+                    "Amazon KDP Publishing",
+                  ],
+                  sameAs: [
+                    "https://www.amazon.com/stores/Ketan-Shukla/author/B0GMXQZ7C6",
+                    "https://reedsy.com/ketan-shukla",
+                    "https://metronagon.com",
+                  ],
+                },
+                {
+                  "@type": "WebSite",
+                  name: "Ketan Shukla",
+                  url: "https://www.ketanshukla.com",
+                },
+              ],
+            }),
+          }}
+        />
         <BookProvider>
           <ImageProtection />
           {children}
