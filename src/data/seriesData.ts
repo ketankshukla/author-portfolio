@@ -165,7 +165,7 @@ export const series: Series[] = [
         coverImage: "/images/aztec/book-covers/book12-cover.png",
         color: "#eab308",
         kindleUrl: "https://www.amazon.com/dp/B0GPNM97PJ",
-        paperbackUrl: "",
+        paperbackUrl: "https://www.amazon.com/dp/B0GR9C6CYC",
       },
     ],
     boxSets: [
