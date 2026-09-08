@@ -56,21 +56,12 @@ export const metadata: Metadata = {
     siteName: "Ketan Shukla",
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: "/images/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Ketan Shukla — Author of 22 Books Across 3 Series",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Ketan Shukla — Author of 22 Books Across 3 Series",
     description:
       "Published Amazon author of 22 books: Aztec Samurai Adventures (epic fantasy), Repetition: Mother of Mastery (non-fiction), and Reality Without Belief (philosophy).",
-    images: ["/images/og-image.png"],
   },
 };
 
