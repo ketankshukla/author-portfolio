@@ -33,7 +33,7 @@ export const realityBooks: ModalBook[] = [
     },
     elaborateDescription:
       "What if the most powerful thing you could do for your life is stop believing — and start seeing? You were taught that believing is noble, that certainty is strength, that conviction signals character. But what if none of that is true? This groundbreaking first volume systematically dismantles the assumption that belief is inherently valuable — showing that belief, disbelief, conviction, and certainty are all psychological postures disconnected from truth. It examines the emotional economy that keeps you invested in positions that limit your life, reveals how identity fuses with belief to create invisible prisons, and exposes why humans prefer stories over reality. You will discover why the addiction to being right costs you more than you realize, why certainty is a comfort rather than a guarantee, and why facts do not negotiate. What remains when belief falls away is clarity, freedom, and a direct relationship with reality that is more powerful, more honest, and more alive than anything belief could ever provide.",
-    coverImage: "/images/reality/book1-cover.png",
+    coverImage: "/images/reality/book1-cover.webp",
     color: "#00CED1",
     kindleUrl: "https://www.amazon.com/dp/B0GJMP6S72",
     paperbackUrl: "https://www.amazon.com/dp/B0GN2G1T8Q",
@@ -61,7 +61,7 @@ export const realityBooks: ModalBook[] = [
     },
     elaborateDescription:
       "The universe is indifferent to your existence. And that is the most liberating truth you will ever discover. Having dismantled belief in Book 1, this volume turns to the nature of reality itself. It establishes that consequences are causal rather than moral, that evidence must be followed over preference, and that truth and meaning are fundamentally different things. It confronts you with cosmic indifference and introduces the discipline of accuracy — showing that developing this discipline is one of the most empowering things you will ever do. You will discover what life actually feels like when the mental commentary falls silent, why debates never resolve anything, why believers and skeptics are mirror images of the same limitation, how science becomes a trap when it becomes an identity, and how spirituality functions as narrative shelter. What you find here is more solid, more real, and more alive than any belief ever was.",
-    coverImage: "/images/reality/book2-cover.png",
+    coverImage: "/images/reality/book2-cover.webp",
     color: "#009688",
     kindleUrl: "https://www.amazon.com/dp/B0GMGP1N5N",
     paperbackUrl: "https://www.amazon.com/dp/B0GNZZCZQN",
@@ -89,7 +89,7 @@ export const realityBooks: ModalBook[] = [
     },
     elaborateDescription:
       "What if almost everything you call thinking is actually a performance — and there is something far more powerful on the other side? This is the pivot point of the series. It first exposes how belief operates in social and cultural systems — rationalism used as ego armor, opinions traded as social currency, outrage as a mechanism for reinforcing beliefs rather than examining them, and online discourse as a structurally broken theater. Then it pivots toward what becomes possible when belief is removed: direct responsibility without excuses, choice without the need for justification, accountability without blame, action without certainty, living without the projected futures of hope and fear, and the primacy of discipline over motivation. Once you see the theater for what it is, you gain access to something extraordinary: the ability to act from genuine clarity rather than borrowed conviction.",
-    coverImage: "/images/reality/book3-cover.png",
+    coverImage: "/images/reality/book3-cover.webp",
     color: "#26A69A",
     kindleUrl: "https://www.amazon.com/dp/B0GMYF5GBK",
     paperbackUrl: "https://www.amazon.com/dp/B0GNZW5QKX",
@@ -117,7 +117,7 @@ export const realityBooks: ModalBook[] = [
     },
     elaborateDescription:
       "This is where everything changes. This is where understanding becomes a way of life. You can understand that belief distorts perception — but can you actually see clearly in the heat of the moment? This book bridges that gap. It develops the capacity to choose clarity over reassurance, end dependence on external validation, see without interpretation, listen without agenda, decide without narrative, and act without ideology. It then addresses the hardest moments — letting reality correct you, handling being wrong with power, standing in not-knowing with confidence, and functioning when nothing makes sense. The practices in these pages will transform not just how you think, but how you see, how you listen, how you decide, and how you respond to everything life puts in front of you. This is not philosophy. This is practice. This is how you actually live in reality.",
-    coverImage: "/images/reality/book4-cover.png",
+    coverImage: "/images/reality/book4-cover.webp",
     color: "#00BCD4",
     kindleUrl: "https://www.amazon.com/dp/B0GMY4YNWX",
     paperbackUrl: "https://www.amazon.com/dp/B0GP6WMY4Y",
@@ -145,7 +145,7 @@ export const realityBooks: ModalBook[] = [
     },
     elaborateDescription:
       "This is the book that changes everything. This is where you discover what you truly are when everything borrowed has been returned. There is a kind of freedom that most people never experience — not because it is hidden, but because it requires releasing everything they have been holding onto. Identity. Narrative. The need to be right. The need to be someone. When all of that is set down — not destroyed, not denied, but simply set down — what remains is extraordinary. This final volume addresses the real-world costs of this orientation — leaving belief communities, losing social belonging, and the loneliness of walking a path most people do not walk. Then it moves into the deepest territory: freedom without identity, peace without meaning, living without explanation, facing death without belief, releasing the myth of legacy, and arriving at the place where there is nothing left to defend. The quiet exit is not a loss. It is an arrival. And what you arrive at is more real, more powerful, and more alive than anything you have ever experienced.",
-    coverImage: "/images/reality/book5-cover.png",
+    coverImage: "/images/reality/book5-cover.webp",
     color: "#4DD0E1",
     kindleUrl: "https://www.amazon.com/dp/B0GMY4MMJN",
     paperbackUrl: "https://www.amazon.com/dp/B0GP18MZFN",
